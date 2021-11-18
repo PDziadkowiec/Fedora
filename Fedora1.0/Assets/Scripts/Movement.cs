@@ -7,18 +7,16 @@ public class Movement : MonoBehaviour
     Rigidbody2D rb;
     public float speed;
     public float jumpForce;
-    bool jumpSkill;
-    bool jumpCooldown;
+    public int healthPoints;
+    public int coins;
+    bool jumpSkill = false;
+    bool jumpCooldown = false;
 
 
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        speed = 4;
-        jumpForce = 8;
-        jumpSkill = true;
-        jumpCooldown = true;
     }
 
 
@@ -50,6 +48,27 @@ public class Movement : MonoBehaviour
         if (collision.gameObject.tag=="Ground")
         {
             jumpCooldown = false;
+        }
+        if (collision.gameObject.tag == "Enemy")
+        {
+            healthPoints--;
+            if (healthPoints <= 0)
+            {
+                // zaimplementować kod na śmierć gracza
+            }
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "JumpPowerUp")
+        {
+            jumpSkill = true;
+            Destroy(collision.gameObject);
+        }
+        if (collision.gameObject.tag == "Coin")
+        {
+            coins++;
+            Destroy(collision.gameObject);
         }
     }
 }
