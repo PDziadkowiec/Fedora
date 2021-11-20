@@ -65,6 +65,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\GameData.cs" />
+    <Compile Include="Assets\Scripts\HUDScripts.cs" />
     <Compile Include="Assets\Scripts\HedgehogAI.cs" />
     <Compile Include="Assets\Scripts\Movement.cs" />
     <Reference Include="UnityEngine">

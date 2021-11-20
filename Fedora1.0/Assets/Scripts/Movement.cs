@@ -70,6 +70,8 @@ public class Movement : MonoBehaviour
         if (collision.gameObject.tag == "JumpPowerUp")
         {
             jumpSkill = true;
+            //Gracz posiada umiejętność skok
+            GameData.jump = true;
             Destroy(collision.gameObject);
         }
         if (collision.gameObject.tag == "Coin")
@@ -78,6 +80,24 @@ public class Movement : MonoBehaviour
             //Dźwięk podniesienia monety
             //this.GetComponent<AudioSource>().PlayOneShot(fileName);
             Destroy(collision.gameObject);
+        }
+        //Zdobycie dodatkowego życia
+        if(collision.gameObject.tag=="HealthUp")
+        {
+            GameData.maxHealthPoints += 1;
+            GameData.healthPoints += 1;
+            Destroy(collision.gameObject);
+        }
+        if(collision.gameObject.tag=="NPC")
+        {
+            //Znika dialog
+        }
+    }
+    private void OnTriggerExit(Collider collision)
+    {
+        if (collision.gameObject.tag == "NPC")
+        {
+            //Znika dialog
         }
     }
 }
