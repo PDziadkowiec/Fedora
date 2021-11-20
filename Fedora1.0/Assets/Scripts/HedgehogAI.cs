@@ -22,6 +22,7 @@ public class HedgehogAI : MonoBehaviour
         float moveBy = side * speed;
         rb.velocity = new Vector2(moveBy, rb.velocity.y);
     }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "TurnPoint")
@@ -29,4 +30,5 @@ public class HedgehogAI : MonoBehaviour
             side = side * -1;
         }
     }
+
 }

@@ -7,12 +7,12 @@ public class Movement : MonoBehaviour
     Rigidbody2D rb;
     public float speed;
     public float jumpForce;
-    public int healthPoints;
-    public int coins;
     bool jumpSkill = false;
     bool jumpCooldown = false;
 
-
+    //Implementacja przeniesiona do GameData.cs
+        //public int healthPoints;
+        //public int coins;
 
     void Start()
     {
@@ -39,6 +39,8 @@ public class Movement : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+                //Dźwięk skoku
+                //this.GetComponent<AudioSource>().PlayOneShot(fileName);
                 jumpCooldown = true;
             }
         }
@@ -51,10 +53,15 @@ public class Movement : MonoBehaviour
         }
         if (collision.gameObject.tag == "Enemy")
         {
-            healthPoints--;
-            if (healthPoints <= 0)
+            GameData.healthPoints--;
+            if (GameData.healthPoints <= 0)
             {
                 // zaimplementować kod na śmierć gracza
+                // Dodać ekran końca gry z zapytaniem czy wyjść/wczytać
+                if (gameObject.tag == "Player")
+                {
+                    Destroy(gameObject);
+                }
             }
         }
     }
@@ -67,7 +74,9 @@ public class Movement : MonoBehaviour
         }
         if (collision.gameObject.tag == "Coin")
         {
-            coins++;
+            GameData.coins++;
+            //Dźwięk podniesienia monety
+            //this.GetComponent<AudioSource>().PlayOneShot(fileName);
             Destroy(collision.gameObject);
         }
     }
