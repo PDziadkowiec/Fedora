@@ -10,9 +10,19 @@ public class Movement : MonoBehaviour
     bool jumpSkill = false;
     bool jumpCooldown = false;
 
+    public AudioSource audioSource;
+    public AudioClip coinSE;
+    public AudioClip jumpSE;
+    public AudioClip healthUpSE;
+    public AudioClip healthDownSE;
+    public AudioClip ladySnailEncounterSE;
+    public AudioClip powerUpSE;
+
+    //jumpSkill i GameData.cs jump można połączyć w jedno?
+
     //Implementacja przeniesiona do GameData.cs
-        //public int healthPoints;
-        //public int coins;
+    //public int healthPoints;
+    //public int coins;
 
     void Start()
     {
@@ -40,7 +50,7 @@ public class Movement : MonoBehaviour
             {
                 rb.velocity = new Vector2(rb.velocity.x, jumpForce);
                 //Dźwięk skoku
-                //this.GetComponent<AudioSource>().PlayOneShot(fileName);
+                audioSource.GetComponent<AudioSource>().PlayOneShot(jumpSE);
                 jumpCooldown = true;
             }
         }
@@ -54,6 +64,8 @@ public class Movement : MonoBehaviour
         if (collision.gameObject.tag == "Enemy")
         {
             GameData.healthPoints--;
+            //Dźwięk utracenia życia
+            audioSource.GetComponent<AudioSource>().PlayOneShot(healthDownSE);
             if (GameData.healthPoints <= 0)
             {
                 // zaimplementować kod na śmierć gracza
@@ -72,13 +84,14 @@ public class Movement : MonoBehaviour
             jumpSkill = true;
             //Gracz posiada umiejętność skok
             GameData.jump = true;
+            audioSource.GetComponent<AudioSource>().PlayOneShot(powerUpSE);
             Destroy(collision.gameObject);
         }
         if (collision.gameObject.tag == "Coin")
         {
-            GameData.coins++;
             //Dźwięk podniesienia monety
-            //this.GetComponent<AudioSource>().PlayOneShot(fileName);
+            audioSource.GetComponent<AudioSource>().PlayOneShot(coinSE);
+            GameData.coins++;
             Destroy(collision.gameObject);
         }
         //Zdobycie dodatkowego życia
@@ -86,11 +99,15 @@ public class Movement : MonoBehaviour
         {
             GameData.maxHealthPoints += 1;
             GameData.healthPoints += 1;
+            //Dźwięk podniesienia życia
+            audioSource.GetComponent<AudioSource>().PlayOneShot(healthUpSE);
             Destroy(collision.gameObject);
         }
         if(collision.gameObject.tag=="NPC")
         {
-            //Znika dialog
+            //Pojawia się dialog
+            //Dźwięk rozpoczęcia dialogu
+            audioSource.GetComponent<AudioSource>().PlayOneShot(ladySnailEncounterSE);
         }
     }
     private void OnTriggerExit(Collider collision)
