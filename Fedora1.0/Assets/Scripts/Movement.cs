@@ -7,9 +7,13 @@ public class Movement : MonoBehaviour
     Rigidbody2D rb;
     public float speed;
     public float jumpForce;
+    public float knockbackStrength;
     //jumpSkill i GameData.cs jump można połączyć w jedno?
     //bool jumpSkill = false;
     bool jumpCooldown = false;
+    bool knockbacked = false;
+    float hitTimer;
+    public float postHitInvincibility;
 
     public AudioSource audioSource;
     public AudioClip coinSE;
@@ -40,9 +44,18 @@ public class Movement : MonoBehaviour
 
     void Move()
     {
-        float x = Input.GetAxisRaw("Horizontal");
-        float moveBy = x * speed;
-        rb.velocity = new Vector2(moveBy, rb.velocity.y);
+        if (knockbacked == false) //wyłącza funkcje poruszania się na czas działania knockbacku
+        {
+            float x = Input.GetAxisRaw("Horizontal");
+            float moveBy = x * speed;
+            rb.velocity = new Vector2(moveBy, rb.velocity.y);
+        }
+        else hitTimer += Time.deltaTime;
+        if (hitTimer >= postHitInvincibility)
+        {
+            knockbacked = false;
+            hitTimer = 0;
+        }
     }
     void Jump()
     {
@@ -65,9 +78,17 @@ public class Movement : MonoBehaviour
         }
         if (collision.gameObject.tag == "Enemy")
         {
-            GameData.healthPoints--;
-            //Dźwięk utracenia życia
-            audioSource.GetComponent<AudioSource>().PlayOneShot(healthDownSE);
+            if (knockbacked == false) //gracz pod wpływem knockbacku jest niewrażliwy na obrażenia - można dodać jakiś efekt mrugania do postaci żeby było widoczne kiedy efekt sie kończy
+            {
+                knockbacked = true;
+                jumpCooldown = true;
+                HedgehogAI enemy = collision.gameObject.GetComponent<HedgehogAI>();
+                rb.velocity = new Vector2(knockbackStrength * enemy.side, knockbackStrength); // skrypt sprawdza w którą stronę przeciwnik się aktualnie przemieszcza i w tą samą
+                                                                                              // stronę odpycha gracza
+                GameData.healthPoints--;
+                //Dźwięk utracenia życia
+                audioSource.GetComponent<AudioSource>().PlayOneShot(healthDownSE);
+            }
             if (GameData.healthPoints <= 0)
             {
                 // zaimplementować kod na śmierć gracza
@@ -115,7 +136,7 @@ public class Movement : MonoBehaviour
     }
     private void OnTriggerExit(Collider collision)
     {
-        if (collision.gameObject.tag == "NPC")
+        if (collision.gameObject.tag == "NPC" || collision.gameObject.tag == "LadySnail")
         {
             //Znika dialog
             GameData.triggerLadySnail = false;

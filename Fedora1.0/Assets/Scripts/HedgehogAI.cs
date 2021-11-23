@@ -6,7 +6,8 @@ public class HedgehogAI : MonoBehaviour
 {
     Rigidbody2D rb;
     public float speed;
-    int side = 1;
+    internal int side = 1; // internal - inne skrypty mogą pobrać wartość zmienniej + zmienna nie pojawia się w opcjach dostosowywania obiektu, co wydaje się dobrym rozwiązaniem.
+                           // Potrzebne do knockbacku
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
