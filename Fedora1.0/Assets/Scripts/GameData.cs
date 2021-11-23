@@ -9,4 +9,6 @@ public static class GameData
     public static int coins = 0;
     public static int maxCoins = 100;
     public static bool jump = false;
+    public static bool triggerLadySnail = false;
+
 }

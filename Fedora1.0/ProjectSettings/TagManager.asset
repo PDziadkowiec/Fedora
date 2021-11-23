@@ -11,6 +11,7 @@ TagManager:
   - TurnPoint
   - HealthUp
   - NPC
+  - LadySnail
   layers:
   - Default
   - TransparentFX

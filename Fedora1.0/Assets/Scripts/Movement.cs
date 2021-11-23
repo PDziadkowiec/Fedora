@@ -7,7 +7,8 @@ public class Movement : MonoBehaviour
     Rigidbody2D rb;
     public float speed;
     public float jumpForce;
-    bool jumpSkill = false;
+    //jumpSkill i GameData.cs jump można połączyć w jedno?
+    //bool jumpSkill = false;
     bool jumpCooldown = false;
 
     public AudioSource audioSource;
@@ -19,8 +20,7 @@ public class Movement : MonoBehaviour
     public AudioClip powerUpSE;
 
     public GameObject gameOverHUD;
-
-    //jumpSkill i GameData.cs jump można połączyć w jedno?
+    public GameObject HUD;
 
     //Implementacja przeniesiona do GameData.cs
     //public int healthPoints;
@@ -46,7 +46,7 @@ public class Movement : MonoBehaviour
     }
     void Jump()
     {
-        if (jumpSkill == true && jumpCooldown==false)
+        if (GameData.jump == true && jumpCooldown==false)
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
@@ -84,7 +84,6 @@ public class Movement : MonoBehaviour
     {
         if (collision.gameObject.tag == "JumpPowerUp")
         {
-            jumpSkill = true;
             //Gracz posiada umiejętność skok
             GameData.jump = true;
             audioSource.GetComponent<AudioSource>().PlayOneShot(powerUpSE);
@@ -106,9 +105,10 @@ public class Movement : MonoBehaviour
             audioSource.GetComponent<AudioSource>().PlayOneShot(healthUpSE);
             Destroy(collision.gameObject);
         }
-        if(collision.gameObject.tag=="NPC")
+        if(collision.gameObject.tag=="LadySnail")
         {
             //Pojawia się dialog
+            GameData.triggerLadySnail = true;
             //Dźwięk rozpoczęcia dialogu
             audioSource.GetComponent<AudioSource>().PlayOneShot(ladySnailEncounterSE);
         }
@@ -118,6 +118,7 @@ public class Movement : MonoBehaviour
         if (collision.gameObject.tag == "NPC")
         {
             //Znika dialog
+            GameData.triggerLadySnail = false;
         }
     }
 }

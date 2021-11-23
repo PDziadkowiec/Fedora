@@ -8,6 +8,7 @@ public class HUDScripts : MonoBehaviour
     public Text HealthAmmount;
     public Text CoinAmmount;
     public Image JumpSkillImage;
+    public Text PressToTalk;
 
     private void Start()
     {
@@ -26,6 +27,10 @@ public class HUDScripts : MonoBehaviour
         if(GameData.jump==true)
         {
             JumpSkillImage.gameObject.SetActive(true);
+        }
+        if(GameData.triggerLadySnail==true)
+        {
+            PressToTalk.gameObject.SetActive(true);
         }
     }
     
