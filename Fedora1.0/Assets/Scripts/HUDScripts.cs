@@ -9,8 +9,6 @@ public class HUDScripts : MonoBehaviour
     public Text CoinAmmount;
     public Image JumpSkillImage;
 
-    //Zrobić by HUD wyświetlał się PRZED platformami
-
     private void Start()
     {
         JumpSkillImage.gameObject.SetActive(false);

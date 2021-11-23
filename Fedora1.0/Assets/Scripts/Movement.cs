@@ -18,6 +18,8 @@ public class Movement : MonoBehaviour
     public AudioClip ladySnailEncounterSE;
     public AudioClip powerUpSE;
 
+    public GameObject gameOverHUD;
+
     //jumpSkill i GameData.cs jump można połączyć w jedno?
 
     //Implementacja przeniesiona do GameData.cs
@@ -72,7 +74,8 @@ public class Movement : MonoBehaviour
                 // Dodać ekran końca gry z zapytaniem czy wyjść/wczytać
                 if (gameObject.tag == "Player")
                 {
-                    Destroy(gameObject);
+                    Time.timeScale = 0;
+                    gameOverHUD.SetActive(true);
                 }
             }
         }
