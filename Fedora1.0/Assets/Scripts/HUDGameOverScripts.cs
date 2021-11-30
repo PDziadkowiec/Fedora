@@ -13,6 +13,10 @@ public class HUDGameOverScripts : MonoBehaviour
         //Nie działa poprawnie
         SceneManager.LoadScene(1);
     }
+    public void MenuExit()
+    {
+        SceneManager.LoadScene(0);
+    }
 
     public void gameOverExit()
     {
