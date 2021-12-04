@@ -60,6 +60,8 @@
      <Compile Include="Assets\Scripts\HUDGameOverScripts.cs" />
      <Compile Include="Assets\Scripts\HUDScripts.cs" />
      <Compile Include="Assets\Scripts\HedgehogAI.cs" />
+     <Compile Include="Assets\Scripts\Menu.cs" />
+     <Compile Include="Assets\Scripts\MoveBetScenes.cs" />
      <Compile Include="Assets\Scripts\Movement.cs" />
      <Compile Include="Assets\Scripts\ObjectLevitation.cs" />
  <Reference Include="UnityEngine">
