@@ -95,7 +95,7 @@ public class Movement : MonoBehaviour
                 // Dodać ekran końca gry z zapytaniem czy wyjść/wczytać
                 if (gameObject.tag == "Player")
                 {
-                    Time.timeScale = 0;
+                    //Time.timeScale = 0;
                     gameOverHUD.SetActive(true);
                 }
             }
@@ -128,9 +128,9 @@ public class Movement : MonoBehaviour
         }
         if(collision.gameObject.tag=="LadySnail")
         {
-            //Pojawia się dialog
+            //Pojawia możliwość rozpoczęcia
             GameData.triggerLadySnail = true;
-            //Dźwięk rozpoczęcia dialogu
+            //Dźwięk Pani Ślimak
             audioSource.GetComponent<AudioSource>().PlayOneShot(ladySnailEncounterSE);
         }
     }
@@ -138,7 +138,7 @@ public class Movement : MonoBehaviour
     {
         if (collision.gameObject.tag == "NPC" || collision.gameObject.tag == "LadySnail")
         {
-            //Znika dialog
+            //Znika możliwość rozpoczęcia dialogu
             GameData.triggerLadySnail = false;
         }
     }
