@@ -134,7 +134,7 @@ public class Movement : MonoBehaviour
             audioSource.GetComponent<AudioSource>().PlayOneShot(ladySnailEncounterSE);
         }
     }
-    private void OnTriggerExit(Collider collision)
+    private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "NPC" || collision.gameObject.tag == "LadySnail")
         {

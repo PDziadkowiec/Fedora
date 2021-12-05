@@ -32,6 +32,10 @@ public class HUDScripts : MonoBehaviour
         {
             PressToTalk.gameObject.SetActive(true);
         }
+        if (GameData.triggerLadySnail == false)
+        {
+            PressToTalk.gameObject.SetActive(false);
+        }
     }
     
    
