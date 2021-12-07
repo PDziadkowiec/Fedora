@@ -13,6 +13,13 @@ public static class GameData
     public static bool firstForestLadySnailDialogue = true;
     public static string location = "Las";
 
+    public static bool hasGrape = false;
+    public static bool hasBasil = false;
+    public static bool hasWater = false;
+    public static bool hasCrystal = false;
+    //Aktualne zadania
+    public static string listOfQuests = "Dowiedz się jak zmienić się z powrotem w człowieka";
+
 
     //Tablice z dialogami
     // [0] - Imię postacii
@@ -51,5 +58,4 @@ public static class GameData
         { "Pani Ślimak", "Oh! Opanowałeś skok!" },
         {"Pani Ślimak", "Teraz odnajdywanie składników mikstury będzie o niebo łatwiejsze, nie sądzisz kochanieńki?" }
    };
-
 }

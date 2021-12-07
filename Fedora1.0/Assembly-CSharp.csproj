@@ -66,6 +66,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\CoinRotation.cs" />
     <Compile Include="Assets\Scripts\GameData.cs" />
+    <Compile Include="Assets\Scripts\GetGrapeItem.cs" />
     <Compile Include="Assets\Scripts\HUDGameOverScripts.cs" />
     <Compile Include="Assets\Scripts\HUDScripts.cs" />
     <Compile Include="Assets\Scripts\HedgehogAI.cs" />

@@ -12,6 +12,7 @@ TagManager:
   - HealthUp
   - NPC
   - LadySnail
+  - GrapeItem
   layers:
   - Default
   - TransparentFX

@@ -113,8 +113,10 @@ public class HUDScripts : MonoBehaviour
                     PressToTalk.text = "Naciśnij E, \naby porozmawiać...";
                     //Upewnienie się, gracz przeczyta cały pierwszy dialog
                     //Zakończenie rozmowy poprzez odejście od NPCa nie zmienni wartości zmiennej  
-                    QuestsText.text = "○ Zdobądź składniki do wytworzenia mikstury: \n- Winogrono \n- Bazylia \n- Woda z Zaczarowanego Źródła \n- Kryształ Przemiany \n\n○ Odszukaj porozmieszczane po całej krainie Zalążki Magii, by zdobyć nowe umiejętności";
                     GameData.firstForestLadySnailDialogue = false;
+                    //Zmiana treści questa w Zadaniach
+                    GameData.listOfQuests = "○ Zdobądź składniki do wytworzenia mikstury: \n- 0/1 Winogrono \n- 0/1 Bazylia \n- 0/1 Woda z Zaczarowanego Źródła \n- 0/1 Kryształ Przemiany \n\n○ Odszukaj porozmieszczane po całej krainie Zalążki Magii, by zdobyć nowe umiejętności";
+                    QuestsText.text = GameData.listOfQuests;
                 }
 
             }
@@ -134,6 +136,7 @@ public class HUDScripts : MonoBehaviour
     public void OpenQuestCanvas()
     {
         QuestCanvas.enabled = true;
+        QuestsText.text = GameData.listOfQuests;
     }
    
     public void ExitQuestCanvas()
