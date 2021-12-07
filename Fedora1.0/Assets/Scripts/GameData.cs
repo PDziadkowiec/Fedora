@@ -43,14 +43,14 @@ public static class GameData
 
     public static string[,] ladySnailNoJumpDialogueForest = new string[,]
     {
-        { "Pani Ślimak", "Rocco, powinieneś skupić się na szukaniu ZALĄŻKA MAGII, a nie na zabawianiu mnie rozmową, ho ho ho." },
+        { "Pani Ślimak", "Rocco, powinieneś skupić się na znalezieniu ZALĄŻKA MAGII, a nie na zabawianiu mnie rozmową, ho ho ho." },
         {"Pani Ślimak", "Jestem pewna, że znajdziesz jeden gdzieś tutaj w Lesie." }
     };
 
     public static string[,] ladySnailDialogueForest = new string[,]
    {
         { "Pani Ślimak", "Oh! Opanowałeś skok!" },
-        {"Pani Ślimak", "Teraz odnajdywanie składników mikstury będzie o niebo łatwiejsze, czyż nie kochanieńki?" }
+        {"Pani Ślimak", "Teraz odnajdywanie składników mikstury będzie o niebo łatwiejsze, nie sądzisz kochanieńki?" }
    };
 
 }

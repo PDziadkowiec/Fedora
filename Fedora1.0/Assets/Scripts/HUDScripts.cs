@@ -19,6 +19,15 @@ public class HUDScripts : MonoBehaviour
     private int DialogueArrayLenght = 0;
     private string[,] currentDialog;
 
+    public Canvas QuestCanvas;
+    public Button QuestButton;
+    public Button ExitFromQuestsButton;
+    public Text QuestsText;
+
+    public Canvas EquipmentCanvas;
+    public Button EquipmentButton;
+    public Button ExitFromEquipmentButton;
+
     private void Start()
     {
         JumpSkillImage.gameObject.SetActive(false);
@@ -104,8 +113,8 @@ public class HUDScripts : MonoBehaviour
                     PressToTalk.text = "Naciśnij E, \naby porozmawiać...";
                     //Upewnienie się, gracz przeczyta cały pierwszy dialog
                     //Zakończenie rozmowy poprzez odejście od NPCa nie zmienni wartości zmiennej  
+                    QuestsText.text = "○ Zdobądź składniki do wytworzenia mikstury: \n- Winogrono \n- Bazylia \n- Woda z Zaczarowanego Źródła \n- Kryształ Przemiany \n\n○ Odszukaj porozmieszczane po całej krainie Zalążki Magii, by zdobyć nowe umiejętności";
                     GameData.firstForestLadySnailDialogue = false;
-
                 }
 
             }
@@ -118,7 +127,28 @@ public class HUDScripts : MonoBehaviour
             PressToTalk.gameObject.SetActive(false);
             PressToTalk.text = "Naciśnij E, \naby porozmawiać...";
         }
+
     }
     
+
+    public void OpenQuestCanvas()
+    {
+        QuestCanvas.enabled = true;
+    }
    
+    public void ExitQuestCanvas()
+    {
+        QuestCanvas.enabled = false;
+    }
+
+    public void OpenEquipmentCanvas()
+    {
+        EquipmentCanvas.enabled = true;
+    }
+
+    public void ExitEquipmentCanvas()
+    {
+        EquipmentCanvas.enabled = false;
+    }
+
 }
