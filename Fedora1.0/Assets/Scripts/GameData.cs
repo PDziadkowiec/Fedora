@@ -21,6 +21,7 @@ public static class GameData
     public static string listOfQuests = "Dowiedz się jak zmienić się z powrotem w człowieka";
 
 
+
     //Tablice z dialogami
     // [0] - Imię postacii
     // [1] - Kwestia dialogowa
