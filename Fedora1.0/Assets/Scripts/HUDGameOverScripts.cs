@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class HUDGameOverScripts : MonoBehaviour
 {
 
+    //Skrypt przypisany do GAME OVER HUD SCRIPTS
+
     Canvas gameOverHud;
 
     public void startLevelAllOverAgain()

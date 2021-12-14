@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class HedgehogAI : MonoBehaviour
 {
+
+    //Skrypt przypisany do obiektu HEDGEHOG ENEMY
+
     Rigidbody2D rb;
     public float speed;
     internal int side = 1; // internal - inne skrypty mogą pobrać wartość zmienniej + zmienna nie pojawia się w opcjach dostosowywania obiektu, co wydaje się dobrym rozwiązaniem.

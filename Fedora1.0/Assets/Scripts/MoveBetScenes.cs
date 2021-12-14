@@ -5,6 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class MoveBetScenes : MonoBehaviour
 {
+
+    //Skrypt przypisany do miejsc, będących przejściem do innych lokacji
+
     [SerializeField] private string nextLevel;
     //Przypisać ręcznie nazwę lokacji
     public string locationName;

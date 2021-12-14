@@ -25,6 +25,8 @@ public class HUDScripts : MonoBehaviour
     private void Start()
     {
         JumpSkillImage.gameObject.SetActive(false);
+
+        //Wyświetlenie nazwy lokacji
         locationNameText.text = GameData.location;
 
         //Wyświetlanie ilości życia
@@ -36,13 +38,6 @@ public class HUDScripts : MonoBehaviour
 
     void Update()
     {
-        //Przerzucić to z Update na triggery
-
-        //Wyświetlenie ikonki skoku, jesli gracz go posiada
-        if(GameData.jump==true)
-        {
-            JumpSkillImage.gameObject.SetActive(true);
-        }
 
     }
     

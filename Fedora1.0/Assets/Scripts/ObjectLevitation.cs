@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class ObjectLevitation : MonoBehaviour
 {
+
+    //Skrypt przypisany do lewitujących obiektów: JUMP POWER UP, GRAPE ITEM
+
     public float degreesPerSecond = 10.0f;
     public float amplitude = 0.5f;
     public float frequency = 1f;

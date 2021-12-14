@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GetJump : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class GetJump : MonoBehaviour
 
     public AudioSource audioSource;
     public AudioClip powerUpSE;
+    public Image JumpSkillImage;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -17,6 +19,7 @@ public class GetJump : MonoBehaviour
             GameData.jump = true;
             audioSource.GetComponent<AudioSource>().PlayOneShot(powerUpSE);
             Destroy(gameObject);
+            JumpSkillImage.gameObject.SetActive(true);
         }
     }
 

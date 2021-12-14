@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class GetGrapeItem : MonoBehaviour
 {
 
-    //Skrypt przypisany do obiektu GRAPEITEM
+    //Skrypt przypisany do obiektu GRAPE ITEM
 
     public AudioSource audioSource;
     public AudioClip getGrapeSE;

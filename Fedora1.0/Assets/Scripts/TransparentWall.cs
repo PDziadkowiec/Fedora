@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class TransparentWall : MonoBehaviour
 {
+
+    //Skrypt przypisany do ścian, które po wejściu w Trigger mają być półprzeźroczyste (sekretów)
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")

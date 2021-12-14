@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class GetHealthUp : MonoBehaviour
 {
 
-    //Skrypt przypisany do obiektu HealthUp
+    //Skrypt przypisany do obiektu HEALTH UP
 
     public AudioSource audioSource;
     public AudioClip healthUpSE;
