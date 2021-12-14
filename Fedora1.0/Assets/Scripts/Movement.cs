@@ -12,6 +12,8 @@ public class Movement : MonoBehaviour
     //bool jumpSkill = false;
     bool jumpCooldown = false;
     bool knockbacked = false;
+    bool grappleInRange = false;
+    Transform grappleTarget;
     float hitTimer;
     public float postHitInvincibility;
 
@@ -40,6 +42,7 @@ public class Movement : MonoBehaviour
     {
         Move();
         Jump();
+        Grapple();
     }
 
     void Move()
@@ -67,6 +70,18 @@ public class Movement : MonoBehaviour
                 //Dźwięk skoku
                 audioSource.GetComponent<AudioSource>().PlayOneShot(jumpSE);
                 jumpCooldown = true;
+            }
+        }
+    }
+    void Grapple()
+    {
+        if (GameData.grapple == true && grappleInRange == true)
+        {
+            if (Input.GetKeyDown(KeyCode.F))
+            {
+                knockbacked = true;
+                Vector2 grappleDir = (grappleTarget.position - rb.transform.position).normalized;
+                rb.velocity = grappleDir * 10;
             }
         }
     }
@@ -103,6 +118,12 @@ public class Movement : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (collision.gameObject.tag == "GrappleField")
+        {
+            // wejście  w zasięg kotwiczki
+            grappleInRange = true;
+            grappleTarget = collision.gameObject.GetComponentInChildren<Transform>();
+        }
         if (collision.gameObject.tag == "JumpPowerUp")
         {
             //Gracz posiada umiejętność skok
@@ -140,6 +161,11 @@ public class Movement : MonoBehaviour
         {
             //Znika możliwość rozpoczęcia dialogu
             GameData.triggerLadySnail = false;
+        }
+        if (collision.gameObject.tag == "GrappleField")
+        {
+            // opuszczenie zasięgu kotwiczki
+            grappleInRange = false;
         }
     }
 }
