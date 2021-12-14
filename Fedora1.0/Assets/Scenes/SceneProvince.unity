@@ -1141,12 +1141,7 @@ MonoBehaviour:
   HealthAmmount: {fileID: 1608903523}
   CoinAmmount: {fileID: 471398235}
   JumpSkillImage: {fileID: 98797604}
-  PressToTalk: {fileID: 2085305033}
   locationNameText: {fileID: 468686095}
-  DialogueHUD: {fileID: 405979180}
-  DialogueBackground: {fileID: 1946833260}
-  Dialogue: {fileID: 2032803197}
-  DialogueCharacter: {fileID: 1872217029}
   QuestCanvas: {fileID: 1897689525}
   QuestButton: {fileID: 290430693}
   ExitFromQuestsButton: {fileID: 432851366}
@@ -3308,6 +3303,7 @@ GameObject:
   - component: {fileID: 537132202}
   - component: {fileID: 537132201}
   - component: {fileID: 537132200}
+  - component: {fileID: 537132203}
   m_Layer: 0
   m_Name: coinsss_0 (6)
   m_TagString: Coin
@@ -3415,6 +3411,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &537132203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 537132198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37e37f8afcda98148b1c60b8c38d620a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 1094210316}
+  coinSE: {fileID: 8300000, guid: c2f73939653e0004b937d21ba0caf468, type: 3}
+  CoinAmmount: {fileID: 471398235}
 --- !u!1 &581260399
 GameObject:
   m_ObjectHideFlags: 0
@@ -4913,6 +4924,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfb5ed5c7dae71a4aa67ad8ceb6807f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioSource: {fileID: 1094210316}
+  getGrapeSE: {fileID: 8300000, guid: f7be0b5e9a22d5f47804a5dc786c5a33, type: 3}
   QuestText: {fileID: 262336276}
 --- !u!1 &918072051
 GameObject:
@@ -5228,14 +5241,10 @@ MonoBehaviour:
   jumpForce: 8.25
   knockbackStrength: 8
   postHitInvincibility: 1.5
+  HealthAmmount: {fileID: 0}
   audioSource: {fileID: 1094210316}
-  coinSE: {fileID: 8300000, guid: c2f73939653e0004b937d21ba0caf468, type: 3}
   jumpSE: {fileID: 8300000, guid: 31eb6121d4702e745abda31b950bc8b1, type: 3}
-  healthUpSE: {fileID: 8300000, guid: b4892ea8ca0f4a846804b1c150dbcee9, type: 3}
   healthDownSE: {fileID: 8300000, guid: 65d9b2bed272f2442aa10bec180e11f3, type: 3}
-  ladySnailEncounterSE: {fileID: 8300000, guid: 15dc545f54f573b4e9834055b74bfeea,
-    type: 3}
-  powerUpSE: {fileID: 8300000, guid: f7be0b5e9a22d5f47804a5dc786c5a33, type: 3}
   gameOverHUD: {fileID: 0}
   HUD: {fileID: 0}
 --- !u!212 &952099111
@@ -6496,6 +6505,7 @@ GameObject:
   - component: {fileID: 1111897946}
   - component: {fileID: 1111897945}
   - component: {fileID: 1111897944}
+  - component: {fileID: 1111897947}
   m_Layer: 0
   m_Name: coinsss_0 (7)
   m_TagString: Coin
@@ -6603,6 +6613,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1111897947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1111897942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37e37f8afcda98148b1c60b8c38d620a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 1094210316}
+  coinSE: {fileID: 8300000, guid: c2f73939653e0004b937d21ba0caf468, type: 3}
+  CoinAmmount: {fileID: 471398235}
 --- !u!1 &1138157290
 GameObject:
   m_ObjectHideFlags: 0
@@ -6831,6 +6856,7 @@ GameObject:
   - component: {fileID: 1147812872}
   - component: {fileID: 1147812871}
   - component: {fileID: 1147812870}
+  - component: {fileID: 1147812873}
   m_Layer: 0
   m_Name: coinsss_0 (3)
   m_TagString: Coin
@@ -6938,6 +6964,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1147812873
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1147812868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37e37f8afcda98148b1c60b8c38d620a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 1094210316}
+  coinSE: {fileID: 8300000, guid: c2f73939653e0004b937d21ba0caf468, type: 3}
+  CoinAmmount: {fileID: 471398235}
 --- !u!1 &1161493751
 GameObject:
   m_ObjectHideFlags: 0
@@ -7283,6 +7324,7 @@ GameObject:
   - component: {fileID: 1206946244}
   - component: {fileID: 1206946243}
   - component: {fileID: 1206946246}
+  - component: {fileID: 1206946247}
   m_Layer: 0
   m_Name: coinsss_0 (2)
   m_TagString: Coin
@@ -7390,6 +7432,21 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.595
+--- !u!114 &1206946247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1206946242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37e37f8afcda98148b1c60b8c38d620a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 1094210316}
+  coinSE: {fileID: 8300000, guid: c2f73939653e0004b937d21ba0caf468, type: 3}
+  CoinAmmount: {fileID: 471398235}
 --- !u!1 &1210319558
 GameObject:
   m_ObjectHideFlags: 0
@@ -7912,6 +7969,7 @@ GameObject:
   - component: {fileID: 1285067219}
   - component: {fileID: 1285067218}
   - component: {fileID: 1285067217}
+  - component: {fileID: 1285067220}
   m_Layer: 0
   m_Name: coinsss_0 (4)
   m_TagString: Coin
@@ -8019,6 +8077,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1285067220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1285067215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37e37f8afcda98148b1c60b8c38d620a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 1094210316}
+  coinSE: {fileID: 8300000, guid: c2f73939653e0004b937d21ba0caf468, type: 3}
+  CoinAmmount: {fileID: 471398235}
 --- !u!1 &1304098318
 GameObject:
   m_ObjectHideFlags: 0
@@ -8581,6 +8654,7 @@ GameObject:
   - component: {fileID: 1480270703}
   - component: {fileID: 1480270702}
   - component: {fileID: 1480270701}
+  - component: {fileID: 1480270704}
   m_Layer: 0
   m_Name: coinsss_0 (5)
   m_TagString: Coin
@@ -8688,6 +8762,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1480270704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1480270699}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37e37f8afcda98148b1c60b8c38d620a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 1094210316}
+  coinSE: {fileID: 8300000, guid: c2f73939653e0004b937d21ba0caf468, type: 3}
+  CoinAmmount: {fileID: 471398235}
 --- !u!1 &1563836267
 GameObject:
   m_ObjectHideFlags: 0
@@ -9838,6 +9927,7 @@ GameObject:
   - component: {fileID: 1735556269}
   - component: {fileID: 1735556268}
   - component: {fileID: 1735556271}
+  - component: {fileID: 1735556272}
   m_Layer: 0
   m_Name: coinsss_0
   m_TagString: Coin
@@ -9945,6 +10035,21 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.595
+--- !u!114 &1735556272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1735556267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37e37f8afcda98148b1c60b8c38d620a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 1094210316}
+  coinSE: {fileID: 8300000, guid: c2f73939653e0004b937d21ba0caf468, type: 3}
+  CoinAmmount: {fileID: 471398235}
 --- !u!1 &1741251774
 GameObject:
   m_ObjectHideFlags: 0
@@ -11230,6 +11335,7 @@ GameObject:
   - component: {fileID: 1929388041}
   - component: {fileID: 1929388040}
   - component: {fileID: 1929388043}
+  - component: {fileID: 1929388044}
   m_Layer: 0
   m_Name: coinsss_0 (1)
   m_TagString: Coin
@@ -11337,6 +11443,21 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.595
+--- !u!114 &1929388044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1929388039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37e37f8afcda98148b1c60b8c38d620a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 1094210316}
+  coinSE: {fileID: 8300000, guid: c2f73939653e0004b937d21ba0caf468, type: 3}
+  CoinAmmount: {fileID: 471398235}
 --- !u!1 &1933224156
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,15 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Movement : MonoBehaviour
 {
+
+    //Skrypt przypisany do obiektu PLAYER
+
     Rigidbody2D rb;
     public float speed;
     public float jumpForce;
     public float knockbackStrength;
-    //jumpSkill i GameData.cs jump można połączyć w jedno?
-    //bool jumpSkill = false;
+
     bool jumpCooldown = false;
     bool knockbacked = false;
     bool grappleInRange = false;
@@ -17,20 +20,14 @@ public class Movement : MonoBehaviour
     float hitTimer;
     public float postHitInvincibility;
 
+    public Text HealthAmmount;
+
     public AudioSource audioSource;
-    public AudioClip coinSE;
     public AudioClip jumpSE;
-    public AudioClip healthUpSE;
     public AudioClip healthDownSE;
-    public AudioClip ladySnailEncounterSE;
-    public AudioClip powerUpSE;
 
     public GameObject gameOverHUD;
     public GameObject HUD;
-
-    //Implementacja przeniesiona do GameData.cs
-    //public int healthPoints;
-    //public int coins;
 
     void Start()
     {
@@ -103,6 +100,8 @@ public class Movement : MonoBehaviour
                 GameData.healthPoints--;
                 //Dźwięk utracenia życia
                 audioSource.GetComponent<AudioSource>().PlayOneShot(healthDownSE);
+                //Wyświetlanie / zaktualizowanie ilości życia
+                HealthAmmount.text = (GameData.healthPoints).ToString() + " / " + (GameData.maxHealthPoints).ToString();
             }
             if (GameData.healthPoints <= 0)
             {
@@ -124,44 +123,9 @@ public class Movement : MonoBehaviour
             grappleInRange = true;
             grappleTarget = collision.gameObject.GetComponentInChildren<Transform>();
         }
-        if (collision.gameObject.tag == "JumpPowerUp")
-        {
-            //Gracz posiada umiejętność skok
-            GameData.jump = true;
-            audioSource.GetComponent<AudioSource>().PlayOneShot(powerUpSE);
-            Destroy(collision.gameObject);
-        }
-        if (collision.gameObject.tag == "Coin")
-        {
-            //Dźwięk podniesienia monety
-            audioSource.GetComponent<AudioSource>().PlayOneShot(coinSE);
-            GameData.coins++;
-            Destroy(collision.gameObject);
-        }
-        //Zdobycie dodatkowego życia
-        if(collision.gameObject.tag=="HealthUp")
-        {
-            GameData.maxHealthPoints += 1;
-            GameData.healthPoints += 1;
-            //Dźwięk podniesienia życia
-            audioSource.GetComponent<AudioSource>().PlayOneShot(healthUpSE);
-            Destroy(collision.gameObject);
-        }
-        if(collision.gameObject.tag=="LadySnail")
-        {
-            //Pojawia możliwość rozpoczęcia
-            GameData.triggerLadySnail = true;
-            //Dźwięk Pani Ślimak
-            audioSource.GetComponent<AudioSource>().PlayOneShot(ladySnailEncounterSE);
-        }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "NPC" || collision.gameObject.tag == "LadySnail")
-        {
-            //Znika możliwość rozpoczęcia dialogu
-            GameData.triggerLadySnail = false;
-        }
         if (collision.gameObject.tag == "GrappleField")
         {
             // opuszczenie zasięgu kotwiczki

@@ -10,7 +10,6 @@ public static class GameData
     public static int maxCoins = 100;
     public static bool jump = false;
     public static bool grapple = false;
-    public static bool triggerLadySnail = false;
     public static bool firstForestLadySnailDialogue = true;
     public static string location = "Las";
 
@@ -19,7 +18,7 @@ public static class GameData
     public static bool hasWater = false;
     public static bool hasCrystal = false;
     //Aktualne zadania
-    public static string listOfQuests = "Dowiedz się jak zmienić się z powrotem w człowieka";
+    public static string listOfQuests = "Dowiedz się, jak zmienić się z powrotem w człowieka";
 
 
 

@@ -5,6 +5,12 @@ using UnityEngine.UI;
 
 public class GetGrapeItem : MonoBehaviour
 {
+
+    //Skrypt przypisany do obiektu GRAPEITEM
+
+    public AudioSource audioSource;
+    public AudioClip getGrapeSE;
+
     public Text QuestText;
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -16,6 +22,7 @@ public class GetGrapeItem : MonoBehaviour
             GameData.listOfQuests = $"○ Zdobądź składniki do wytworzenia mikstury: \n- 1/1 Winogrono \n- 0/1 Bazylia \n- 0/1 Woda z Zaczarowanego Źródła \n- 0/1 Kryształ Przemiany \n\n○ Odszukaj porozmieszczane po całej krainie Zalążki Magii, by zdobyć nowe umiejętności";
             QuestText.text = GameData.listOfQuests;
             //Zrobić: pokazuje się obrazek winogrona w Przedmiotach
+            audioSource.GetComponent<AudioSource>().PlayOneShot(getGrapeSE);
             Destroy(gameObject);
         }
     }
