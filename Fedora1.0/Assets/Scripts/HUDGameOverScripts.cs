@@ -12,7 +12,7 @@ public class HUDGameOverScripts : MonoBehaviour
 
     public void startLevelAllOverAgain()
     {
-        //Nie działa poprawnie
+        //Zmienić na dynamiczne wybierane aktualnej sceny
         SceneManager.LoadScene(1);
     }
     public void MenuExit()
