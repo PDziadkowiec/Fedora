@@ -71,9 +71,11 @@
     <Compile Include="Assets\Scripts\GetHealthUp.cs" />
     <Compile Include="Assets\Scripts\GetJump.cs" />
     <Compile Include="Assets\Scripts\HUDGameOverScripts.cs" />
+    <Compile Include="Assets\Scripts\HUDMenuPauseScripts.cs" />
     <Compile Include="Assets\Scripts\HUDScripts.cs" />
     <Compile Include="Assets\Scripts\HedgehogAI.cs" />
     <Compile Include="Assets\Scripts\Menu.cs" />
+    <Compile Include="Assets\Scripts\MenuPause.cs" />
     <Compile Include="Assets\Scripts\MoveBetScenes.cs" />
     <Compile Include="Assets\Scripts\Movement.cs" />
     <Compile Include="Assets\Scripts\ObjectLevitation.cs" />
