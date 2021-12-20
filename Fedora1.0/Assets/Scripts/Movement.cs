@@ -75,10 +75,10 @@ public class Movement : MonoBehaviour
         if (GameData.grapple == true && grappleInRange == true)
         {
             if (Input.GetKeyDown(KeyCode.F))
-            {
+            {              
                 knockbacked = true;
                 Vector2 grappleDir = (grappleTarget.position - rb.transform.position).normalized;
-                rb.velocity = grappleDir * 10;
+                rb.velocity = grappleDir * 15;
             }
         }
     }
@@ -115,8 +115,9 @@ public class Movement : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "GrappleField")
+        if (collision.gameObject.tag == "GrappleField") // Prefab GrapplePole - zmieniajcie skale rozmiaru GrappleField jak wam pasuje - im mniejsze GrappleField tym bardziej precyzyjnie powinien trafiać
         {
+            Debug.Log("działa");
             // wejście  w zasięg kotwiczki
             grappleInRange = true;
             grappleTarget = collision.gameObject.GetComponentInChildren<Transform>();
@@ -126,6 +127,7 @@ public class Movement : MonoBehaviour
     {
         if (collision.gameObject.tag == "GrappleField")
         {
+            Debug.Log("wyjście");
             // opuszczenie zasięgu kotwiczki
             grappleInRange = false;
         }

@@ -14,6 +14,7 @@ TagManager:
   - LadySnail
   - GrapeItem
   - Water
+  - GrappleField
   layers:
   - Default
   - TransparentFX
