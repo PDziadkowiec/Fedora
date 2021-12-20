@@ -64,7 +64,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\BottomofWater.cs" />
     <Compile Include="Assets\Scripts\CoinRotation.cs" />
+    <Compile Include="Assets\Scripts\DamageWater.cs" />
     <Compile Include="Assets\Scripts\GameData.cs" />
     <Compile Include="Assets\Scripts\GetCoin.cs" />
     <Compile Include="Assets\Scripts\GetGrapeItem.cs" />

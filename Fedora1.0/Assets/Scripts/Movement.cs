@@ -109,7 +109,7 @@ public class Movement : MonoBehaviour
                 // Dodać ekran końca gry z zapytaniem czy wyjść/wczytać
                 if (gameObject.tag == "Player")
                 {
-                    //Time.timeScale = 0;
+                    Time.timeScale = 0;
                     gameOverHUD.SetActive(true);
                 }
             }

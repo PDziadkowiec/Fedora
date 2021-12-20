@@ -13,6 +13,7 @@ TagManager:
   - NPC
   - LadySnail
   - GrapeItem
+  - Water
   layers:
   - Default
   - TransparentFX
