@@ -39,7 +39,7 @@ public class TriggerDialogLadySnail : MonoBehaviour
         DialogueLadySnail(collision);
     }
 
-    //Zacina się dialog gdy na OnTriggerStay2D
+    //Zacina się dialog gdy na OnTriggerStay2D?
     private void DialogueLadySnail(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
@@ -101,10 +101,15 @@ public class TriggerDialogLadySnail : MonoBehaviour
                     DialogueHUD.gameObject.SetActive(false);
                     PressToTalk.text = "Naciśnij E, \naby porozmawiać...";
                     //Upewnienie się, gracz przeczyta cały pierwszy dialog
-                    //Zakończenie rozmowy poprzez odejście od NPCa nie zmienni wartości zmiennej  
+                    //Zakończenie rozmowy poprzez odejście od NPCa NIE ZMIENI wartości zmiennej  
                     GameData.firstForestLadySnailDialogue = false;
                     //Zmiana treści questa w Zadaniach
-                    GameData.listOfQuests = "○ Zdobądź składniki do wytworzenia mikstury: \n- 0/1 Winogrono \n- 0/1 Bazylia \n- 0/1 Woda z Zaczarowanego Źródła \n- 0/1 Kryształ Przemiany \n\n○ Odszukaj porozmieszczane po całej krainie Zalążki Magii, by zdobyć nowe umiejętności";
+                    GameData.listOfQuests = $"○ Zdobądź składniki do wytworzenia mikstury: " +
+                    $"\n- {GameData.hasGrapeBoolToInt()}/1 Winogrono " +
+                    $"\n- {GameData.hasBasilBoolToInt()}/1 Bazylia " +
+                    $"\n- {GameData.hasWaterBoolToInt()}/1 Woda z Zaczarowanego Źródła " +
+                    $"\n- {GameData.hasCrystalBoolToInt()}/1 Kryształ Przemiany " +
+                    $"\n\n○ Odszukaj porozmieszczane po całej krainie Zalążki Magii, by zdobyć nowe umiejętności";
                     QuestsText.text = GameData.listOfQuests;
                 }
             }
@@ -118,7 +123,7 @@ public class TriggerDialogLadySnail : MonoBehaviour
             {
                 DialogueCounter = 0;
                 DialogueHUD.gameObject.SetActive(false);
-                PressToTalk.gameObject.SetActive(false);
+                PressToTalk.gameObject.SetActive(true);
                 PressToTalk.text = "Naciśnij E, \naby porozmawiać...";
             }
     }

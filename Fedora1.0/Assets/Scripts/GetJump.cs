@@ -24,7 +24,7 @@ public class GetJump : MonoBehaviour
             Destroy(gameObject);
             Time.timeScale = 0;
             AbilityName.text = "Zdobyto umiejętność:\nSKOK";
-            AbilityDesc.text = "Rocco może teraz skakać. \nUżyj tej umiejętności, by dostać się do nowych miejsc!";
+            AbilityDesc.text = "Użyj tej umiejętności, by dostać się do nowych miejsc!\nNaciśnij Spację, aby skoczyć.";
             NewAbilityCanvas.gameObject.SetActive(true);
 
             JumpSkillImage.gameObject.SetActive(true);

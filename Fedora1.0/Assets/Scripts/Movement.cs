@@ -105,8 +105,6 @@ public class Movement : MonoBehaviour
             }
             if (GameData.healthPoints <= 0)
             {
-                // zaimplementować kod na śmierć gracza
-                // Dodać ekran końca gry z zapytaniem czy wyjść/wczytać
                 if (gameObject.tag == "Player")
                 {
                     Time.timeScale = 0;

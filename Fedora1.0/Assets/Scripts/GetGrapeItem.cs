@@ -22,7 +22,12 @@ public class GetGrapeItem : MonoBehaviour
         {
             GameData.hasGrape = true;
             //Zmiana treści questa w Zadaniach
-            GameData.listOfQuests = $"○ Zdobądź składniki do wytworzenia mikstury: \n- 1/1 Winogrono \n- 0/1 Bazylia \n- 0/1 Woda z Zaczarowanego Źródła \n- 0/1 Kryształ Przemiany \n\n○ Odszukaj porozmieszczane po całej krainie Zalążki Magii, by zdobyć nowe umiejętności";
+            GameData.listOfQuests = $"○ Zdobądź składniki do wytworzenia mikstury: " +
+                $"\n- {GameData.hasGrapeBoolToInt()}/1 Winogrono " +
+                $"\n- {GameData.hasBasilBoolToInt()}/1 Bazylia " +
+                $"\n- {GameData.hasWaterBoolToInt()}/1 Woda z Zaczarowanego Źródła " +
+                $"\n- {GameData.hasCrystalBoolToInt()}/1 Kryształ Przemiany " +
+                $"\n\n○ Odszukaj porozmieszczane po całej krainie Zalążki Magii, by zdobyć nowe umiejętności";
             QuestText.text = GameData.listOfQuests;
             //Zrobić: pokazuje się obrazek winogrona w Przedmiotach
             audioSource.GetComponent<AudioSource>().PlayOneShot(getGrapeSE);

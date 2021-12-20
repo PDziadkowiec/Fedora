@@ -24,12 +24,13 @@ public class DamageWater : MonoBehaviour
             //Wyświetlanie / zaktualizowanie ilości życia
             HealthAmmount.text = (GameData.healthPoints).ToString() + " / " + (GameData.maxHealthPoints).ToString();
         }
+        
         if (GameData.healthPoints <= 0)
         {
             Time.timeScale = 0;
             gameOverHUD.SetActive(true);
         }
-
+        
     }
 
 }

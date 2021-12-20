@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -17,9 +18,30 @@ public static class GameData
     public static bool hasBasil = false;
     public static bool hasWater = false;
     public static bool hasCrystal = false;
+
     //Aktualne zadania
     public static string listOfQuests = "Dowiedz się, jak zmienić się z powrotem w człowieka";
 
+    public static int hasGrapeBoolToInt()
+    {
+        int result = Convert.ToInt32(hasGrape);
+        return result;
+    }
+    public static int hasBasilBoolToInt()
+    {
+        int result = Convert.ToInt32(hasBasil);
+        return result;
+    }
+    public static int hasWaterBoolToInt()
+    {
+        int result = Convert.ToInt32(hasWater);
+        return result;
+    }
+    public static int hasCrystalBoolToInt()
+    {
+        int result = Convert.ToInt32(hasCrystal);
+        return result;
+    }
 
 
     //Tablice z dialogami

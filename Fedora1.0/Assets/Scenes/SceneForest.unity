@@ -7090,7 +7090,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed5e711d74c4dab4897ec1bc1e66a563, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
+  speed: 10
   jumpForce: 8.25
   knockbackStrength: 8
   postHitInvincibility: 1.5
