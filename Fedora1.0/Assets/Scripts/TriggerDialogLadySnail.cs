@@ -123,7 +123,7 @@ public class TriggerDialogLadySnail : MonoBehaviour
             {
                 DialogueCounter = 0;
                 DialogueHUD.gameObject.SetActive(false);
-                PressToTalk.gameObject.SetActive(true);
+                PressToTalk.gameObject.SetActive(false);
                 PressToTalk.text = "Naciśnij E, \naby porozmawiać...";
             }
     }
