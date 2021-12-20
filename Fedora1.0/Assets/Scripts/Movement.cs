@@ -84,40 +84,41 @@ public class Movement : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag=="Ground")
+        switch (collision.gameObject.tag)
         {
-            jumpCooldown = false;
-        }
-        if (collision.gameObject.tag == "Enemy")
-        {
-            if (knockbacked == false) //gracz pod wpływem knockbacku jest niewrażliwy na obrażenia - można dodać jakiś efekt mrugania do postaci żeby było widoczne kiedy efekt sie kończy
-            {
-                knockbacked = true;
-                jumpCooldown = true;
-                HedgehogAI enemy = collision.gameObject.GetComponent<HedgehogAI>();
-                rb.velocity = new Vector2(knockbackStrength * enemy.side, knockbackStrength); // skrypt sprawdza w którą stronę przeciwnik się aktualnie przemieszcza i w tą samą
-                                                                                              // stronę odpycha gracza
-                GameData.healthPoints--;
-                //Dźwięk utracenia życia
-                audioSource.GetComponent<AudioSource>().PlayOneShot(healthDownSE);
-                //Wyświetlanie / zaktualizowanie ilości życia
-                HealthAmmount.text = (GameData.healthPoints).ToString() + " / " + (GameData.maxHealthPoints).ToString();
-            }
-            if (GameData.healthPoints <= 0)
-            {
-                if (gameObject.tag == "Player")
+            case ("Ground"):
+                jumpCooldown = false;
+                break;
+            case ("Enemy"):
+                if (knockbacked == false) //gracz pod wpływem knockbacku jest niewrażliwy na obrażenia - można dodać jakiś efekt mrugania do postaci żeby było widoczne kiedy efekt sie kończy
                 {
-                    Time.timeScale = 0;
-                    gameOverHUD.SetActive(true);
+                    knockbacked = true;
+                    jumpCooldown = true;
+                    HedgehogAI enemy = collision.gameObject.GetComponent<HedgehogAI>();
+                    rb.velocity = new Vector2(knockbackStrength * enemy.side, knockbackStrength); // skrypt sprawdza w którą stronę przeciwnik się aktualnie przemieszcza i w tą samą
+                                                                                                  // stronę odpycha gracza
+                    GameData.healthPoints--;
+                    //Dźwięk utracenia życia
+                    audioSource.GetComponent<AudioSource>().PlayOneShot(healthDownSE);
+                    //Wyświetlanie / zaktualizowanie ilości życia
+                    HealthAmmount.text = (GameData.healthPoints).ToString() + " / " + (GameData.maxHealthPoints).ToString();
                 }
-            }
+                if (GameData.healthPoints <= 0)
+                {
+                    if (gameObject.tag == "Player")
+                    {
+                        Time.timeScale = 0;
+                        gameOverHUD.SetActive(true);
+                    }
+                }
+                break;
+
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "GrappleField") // Prefab GrapplePole - zmieniajcie skale rozmiaru GrappleField jak wam pasuje - im mniejsze GrappleField tym bardziej precyzyjnie powinien trafiać
         {
-            Debug.Log("działa");
             // wejście  w zasięg kotwiczki
             grappleInRange = true;
             grappleTarget = collision.gameObject.GetComponentInChildren<Transform>();
@@ -127,7 +128,6 @@ public class Movement : MonoBehaviour
     {
         if (collision.gameObject.tag == "GrappleField")
         {
-            Debug.Log("wyjście");
             // opuszczenie zasięgu kotwiczki
             grappleInRange = false;
         }
