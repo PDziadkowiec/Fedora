@@ -10,6 +10,9 @@ public class GetJump : MonoBehaviour
     public AudioSource audioSource;
     public AudioClip powerUpSE;
     public Image JumpSkillImage;
+    public Canvas NewAbilityCanvas;
+    public Text AbilityName;
+    public Text AbilityDesc;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -19,6 +22,11 @@ public class GetJump : MonoBehaviour
             GameData.jump = true;
             audioSource.GetComponent<AudioSource>().PlayOneShot(powerUpSE);
             Destroy(gameObject);
+            Time.timeScale = 0;
+            AbilityName.text = "Zdobyto umiejętność\nSKOK";
+            AbilityDesc.text = "Rocco może teraz skakać. \nUżyj tej umiejętności, by dostać się do nowych miejsc!";
+            NewAbilityCanvas.gameObject.SetActive(true);
+
             JumpSkillImage.gameObject.SetActive(true);
         }
     }
