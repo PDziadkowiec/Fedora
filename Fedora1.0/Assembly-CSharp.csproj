@@ -81,6 +81,7 @@
     <Compile Include="Assets\Scripts\MoveBetScenes.cs" />
     <Compile Include="Assets\Scripts\Movement.cs" />
     <Compile Include="Assets\Scripts\NewAbilityCanvasScripts.cs" />
+    <Compile Include="Assets\Scripts\NewItemCanvasScripts.cs" />
     <Compile Include="Assets\Scripts\ObjectLevitation.cs" />
     <Compile Include="Assets\Scripts\TransparentWall.cs" />
     <Compile Include="Assets\Scripts\TriggerDialogLadySnail.cs" />

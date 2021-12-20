@@ -13,6 +13,9 @@ public class GetGrapeItem : MonoBehaviour
 
     public Text QuestText;
 
+    public Canvas NewItemCanvas;
+    public Text ItemText;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
@@ -24,6 +27,9 @@ public class GetGrapeItem : MonoBehaviour
             //Zrobić: pokazuje się obrazek winogrona w Przedmiotach
             audioSource.GetComponent<AudioSource>().PlayOneShot(getGrapeSE);
             Destroy(gameObject);
+            Time.timeScale = 0;
+            ItemText.text = "Zdobyto przedmiot:\nWINOGRONO";
+            NewItemCanvas.gameObject.SetActive(true);
         }
     }
 

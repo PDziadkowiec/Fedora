@@ -23,7 +23,7 @@ public class GetJump : MonoBehaviour
             audioSource.GetComponent<AudioSource>().PlayOneShot(powerUpSE);
             Destroy(gameObject);
             Time.timeScale = 0;
-            AbilityName.text = "Zdobyto umiejętność\nSKOK";
+            AbilityName.text = "Zdobyto umiejętność:\nSKOK";
             AbilityDesc.text = "Rocco może teraz skakać. \nUżyj tej umiejętności, by dostać się do nowych miejsc!";
             NewAbilityCanvas.gameObject.SetActive(true);
 
