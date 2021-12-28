@@ -67,11 +67,14 @@
     <Compile Include="Assets\Scripts\BottomofWater.cs" />
     <Compile Include="Assets\Scripts\DamageWater.cs" />
     <Compile Include="Assets\Scripts\GameData.cs" />
+    <Compile Include="Assets\Scripts\GetBasilItem.cs" />
     <Compile Include="Assets\Scripts\GetCoin.cs" />
     <Compile Include="Assets\Scripts\GetGrapeItem.cs" />
     <Compile Include="Assets\Scripts\GetGrapple.cs" />
     <Compile Include="Assets\Scripts\GetHealthUp.cs" />
     <Compile Include="Assets\Scripts\GetJump.cs" />
+    <Compile Include="Assets\Scripts\GetSwimming.cs" />
+    <Compile Include="Assets\Scripts\GetWaterItem.cs" />
     <Compile Include="Assets\Scripts\HUDGameOverScripts.cs" />
     <Compile Include="Assets\Scripts\HUDMenuPauseScripts.cs" />
     <Compile Include="Assets\Scripts\HUDScripts.cs" />

@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SceneProvince.unity
     guid: 5126b095b90f59b43aea6e3fef42912f
+  - enabled: 1
+    path: Assets/Scenes/SceneCity.unity
+    guid: 55fe363572c7d5b49b6ca01b3eb19edc
   m_configObjects: {}

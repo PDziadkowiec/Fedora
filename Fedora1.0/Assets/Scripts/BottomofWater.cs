@@ -12,7 +12,7 @@ public class BottomofWater : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Player")
+        if (collision.tag == "Player" && GameData.swimming == false)
         {
             collision.transform.position = new Vector2(position_x, position_y);
         }
