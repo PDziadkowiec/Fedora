@@ -22,11 +22,12 @@ public class GetBasilItem : MonoBehaviour
             GameData.hasBasil = true;
             //Zmiana treści questa w Zadaniach
             GameData.listOfQuests = $"○ Zdobądź składniki do wytworzenia mikstury: " +
-                $"\n- {GameData.hasGrapeBoolToInt()}/1 Winogrono " +
-                $"\n- {GameData.hasBasilBoolToInt()}/1 Bazylia " +
-                $"\n- {GameData.hasWaterBoolToInt()}/1 Woda z Zaczarowanego Źródła " +
-                $"\n- {GameData.hasCrystalBoolToInt()}/1 Kryształ Przemiany " +
-                $"\n\n○ Odszukaj porozmieszczane po całej krainie Zalążki Magii, by zdobyć nowe umiejętności";
+            $"\n- {GameData.hasGrapeBoolToInt()}/1 Winogrono " +
+            $"\n- {GameData.hasBasilBoolToInt()}/1 Bazylia " +
+            $"\n- {GameData.hasWaterBoolToInt()}/1 Woda z Zaczarowanego Źródła " +
+            $"\n- {GameData.hasCrystalBoolToInt()}/1 Kryształ Przemiany " +
+            $"\nGdy zdobędziesz wszystkie, wróć do Pani Ślimak." +
+            $"\n\n○ Odszukaj porozmieszczane po całej krainie Zalążki Magii, by zdobyć nowe umiejętności";
             QuestText.text = GameData.listOfQuests;
 
             audioSource.GetComponent<AudioSource>().PlayOneShot(getBasilSE);

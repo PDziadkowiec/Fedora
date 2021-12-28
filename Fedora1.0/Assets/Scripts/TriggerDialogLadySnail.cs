@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class TriggerDialogLadySnail : MonoBehaviour
 {
@@ -60,15 +61,24 @@ public class TriggerDialogLadySnail : MonoBehaviour
                     }
                     else
                     {
-                        //Gdy gracz nie posiada skoku
-                        if (GameData.jump == false)
+                        //Gracz zdobył wszystkie składniki
+                        if (GameData.hasGrape == true && GameData.hasBasil == true && GameData.hasWater == true && GameData.hasCrystal == true)
                         {
-                            currentDialog = GameData.ladySnailNoJumpDialogueForest;
+                            currentDialog = GameData.ladySnailAllItemsDialogueForest;
+
+                            GameData.endGame = true;
+                            
                         }
-                        //Gdy gracz posiada skok
-                        else
+                        //Gdy gracz posiada SKOK
+                        else if (GameData.jump == true)
                         {
-                            currentDialog = GameData.ladySnailDialogueForest;
+                            currentDialog = GameData.ladySnailJumpDialogueForest;
+                        }
+                        //Gdy gracz nie posiada skoku
+                        else
+                        //else if(GameData.jump == false)
+                        {
+                            currentDialog = GameData.ladySnailNoSkillDialogueForest;
                         }
                     }
                 }
@@ -109,22 +119,24 @@ public class TriggerDialogLadySnail : MonoBehaviour
                     $"\n- {GameData.hasBasilBoolToInt()}/1 Bazylia " +
                     $"\n- {GameData.hasWaterBoolToInt()}/1 Woda z Zaczarowanego Źródła " +
                     $"\n- {GameData.hasCrystalBoolToInt()}/1 Kryształ Przemiany " +
+                    $"\nGdy zdobędziesz wszystkie, wróć do Pani Ślimak." +
                     $"\n\n○ Odszukaj porozmieszczane po całej krainie Zalążki Magii, by zdobyć nowe umiejętności";
                     QuestsText.text = GameData.listOfQuests;
+
                 }
             }
         }
-    }
 
-    //Odejście od NPCa przerywa dialog i przywraca domyślne wartości
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.gameObject.tag == "Player")
+    }
+        //Odejście od NPCa przerywa dialog i przywraca domyślne wartości
+        private void OnTriggerExit2D(Collider2D collision)
+        {
+            if (collision.gameObject.tag == "Player")
             {
                 DialogueCounter = 0;
                 DialogueHUD.gameObject.SetActive(false);
                 PressToTalk.gameObject.SetActive(false);
                 PressToTalk.text = "Naciśnij E, \naby porozmawiać...";
             }
-    }
+        }
 }

@@ -17,4 +17,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SceneCity.unity
     guid: 55fe363572c7d5b49b6ca01b3eb19edc
+  - enabled: 1
+    path: Assets/Scenes/SceneMountains.unity
+    guid: ed8465b07457db74bb61dea2d6b321dc
+  - enabled: 1
+    path: Assets/Scenes/SceneEndGame.unity
+    guid: 5935faa91a1c2364a8a14dc13ee384d3
   m_configObjects: {}

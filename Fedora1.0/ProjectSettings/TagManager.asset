@@ -17,6 +17,8 @@ TagManager:
   - GrappleField
   - BasilItem
   - WaterItem
+  - CrystalItem
+  - Kettle
   layers:
   - Default
   - TransparentFX

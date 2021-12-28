@@ -17,13 +17,15 @@ public static class GameData
     public static bool firstForestLadySnailDialogue = true;
     public static string location = "Las";
 
-    public static bool hasGrape = false;
-    public static bool hasBasil = false;
-    public static bool hasWater = false;
-    public static bool hasCrystal = false;
+    public static bool hasGrape = true;
+    public static bool hasBasil = true;
+    public static bool hasWater = true;
+    public static bool hasCrystal = true;
+
+    public static bool endGame = false;
 
     //Aktualne zadania
-    public static string listOfQuests = "Dowiedz się, jak zmienić się z powrotem w człowieka";
+    public static string listOfQuests = "Dowiedz się, jak zmienić się z powrotem w człowieka.";
 
     public static int hasGrapeBoolToInt()
     {
@@ -73,15 +75,27 @@ public static class GameData
         { "Pani Ślimak", "Powodzenia kochanieńki!" }
     };
 
-    public static string[,] ladySnailNoJumpDialogueForest = new string[,]
+    public static string[,] ladySnailNoSkillDialogueForest = new string[,]
     {
         { "Pani Ślimak", "Rocco, powinieneś skupić się na znalezieniu ZALĄŻKA MAGII, a nie na zabawianiu mnie rozmową, ho ho ho." },
         {"Pani Ślimak", "Jestem pewna, że znajdziesz jeden gdzieś tutaj w Lesie." }
     };
 
-    public static string[,] ladySnailDialogueForest = new string[,]
+    public static string[,] ladySnailJumpDialogueForest = new string[,]
    {
         { "Pani Ślimak", "Oh! Opanowałeś skok!" },
         {"Pani Ślimak", "Teraz odnajdywanie składników mikstury będzie o niebo łatwiejsze, nie sądzisz kochanieńki?" }
    };
+
+    public static string[,] ladySnailAllItemsDialogueForest = new string[,]
+{
+        {"Pani Ślimak", "Ojejku, widzę, że zdobyłeś wszystkie składniki!"},
+        {"Pani Ślimak", "Daj mi je, zaraz sporządzę miksturę."},
+        {"Pani Ślimak", "..." },
+        {"Pani Ślimak", "Mikstura gotowa. Czeka na ciebie w moim kociołku."},
+        {"Pani Ślimak", "Po wypiciu, zakręci ci się trochę w głowie i możesz zemdleć, ale po przebudzeniu się, będziesz z powrotem człowiekiem." },
+        {"Rocco", "Dziękuję proszę Pani Ślimak! Pani zdrowie!" },
+        {"Pani Ślimak", "Bywaj, słoneczko." }
+};
 }
+

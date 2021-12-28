@@ -26,6 +26,7 @@ public class GetWaterItem : MonoBehaviour
                 $"\n- {GameData.hasBasilBoolToInt()}/1 Bazylia " +
                 $"\n- {GameData.hasWaterBoolToInt()}/1 Woda z Zaczarowanego Źródła " +
                 $"\n- {GameData.hasCrystalBoolToInt()}/1 Kryształ Przemiany " +
+                $"\nGdy zdobędziesz wszystkie, wróć do Pani Ślimak." +
                 $"\n\n○ Odszukaj porozmieszczane po całej krainie Zalążki Magii, by zdobyć nowe umiejętności";
             QuestText.text = GameData.listOfQuests;
             
