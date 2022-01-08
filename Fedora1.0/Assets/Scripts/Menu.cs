@@ -14,6 +14,7 @@ public class Menu : MonoBehaviour
     public AudioSource[] music;
     public AudioSource[] soundEffects;
     public Slider musicSlider,seSlider;
+
     public void showSettings()
     {
         canvasMainMenu.enabled = false;
@@ -32,6 +33,11 @@ public class Menu : MonoBehaviour
     public void QuitGame()
     {
         Application.Quit();
+    }
+
+    public void FullScreen(bool isFullScreen)
+    {
+        Screen.fullScreen = isFullScreen;
     }
 
 }
