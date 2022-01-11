@@ -805,24 +805,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvasMainMenu: {fileID: 257184606}
   canvasSettings: {fileID: 1832553081}
-  music:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  soundEffects:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   musicSlider: {fileID: 928556734}
   seSlider: {fileID: 1165674533}
+  audioMixer: {fileID: 24100000, guid: 2a43e25df5982a44c947b6020bb23f54, type: 2}
 --- !u!224 &406337881
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2069,16 +2054,16 @@ MonoBehaviour:
   m_FillRect: {fileID: 756251035}
   m_HandleRect: {fileID: 1831597978}
   m_Direction: 0
-  m_MinValue: 0
-  m_MaxValue: 100
-  m_WholeNumbers: 1
-  m_Value: 50
+  m_MinValue: -80
+  m_MaxValue: 0
+  m_WholeNumbers: 0
+  m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 406337880}
-        m_MethodName: changeMusicVolume
-        m_Mode: 1
+        m_MethodName: VolumeChange
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

@@ -4,16 +4,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.Audio;
 
 public class Menu : MonoBehaviour
 {
 
-    //Skrypt do obsługi Menu Głównego
+    //Skrypt do obsługi Menu Głównego, w tym ustawień
 
     public Canvas canvasMainMenu, canvasSettings;
-    public AudioSource[] music;
-    public AudioSource[] soundEffects;
     public Slider musicSlider,seSlider;
+    public AudioMixer audioMixer;
 
     public void showSettings()
     {
@@ -38,6 +38,11 @@ public class Menu : MonoBehaviour
     public void FullScreen(bool isFullScreen)
     {
         Screen.fullScreen = isFullScreen;
+    }
+    
+    public void VolumeChange(float v)
+    {
+        audioMixer.SetFloat("volume", v);
     }
 
 }
