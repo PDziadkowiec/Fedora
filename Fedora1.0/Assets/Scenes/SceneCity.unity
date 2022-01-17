@@ -828,12 +828,12 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: 
+      - m_Target: {fileID: 1329172607}
+        m_MethodName: loadCheckpoint
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2659,7 +2659,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1329172607}
-        m_MethodName: startLevelAllOverAgain
+        m_MethodName: startGameAllOverAgain
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5203,7 +5203,7 @@ GameObject:
   - component: {fileID: 1587527131}
   - component: {fileID: 1587527130}
   m_Layer: 5
-  m_Name: LevelAllOverAgainButtonText
+  m_Name: GameAllOverAgainButtonText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5260,7 +5260,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: ROZPOCZNIJ POZIOM OD NOWA
+  m_Text: "ROZPOCZNIJ GR\u0118 OD NOWA"
 --- !u!222 &1587527131
 CanvasRenderer:
   m_ObjectHideFlags: 0
