@@ -14,13 +14,16 @@ public static class GameData
     public static bool grapple = false;
     public static bool swimming = false;
 
-    public static bool firstForestLadySnailDialogue = true;
     public static string location = "Las";
 
     public static bool hasGrape = true;
     public static bool hasBasil = true;
     public static bool hasWater = true;
     public static bool hasCrystal = true;
+
+    public static int sceneIndex = 1;
+
+    public static bool firstForestLadySnailDialogue = true;
 
     public static bool endGame = false;
 
@@ -88,7 +91,7 @@ public static class GameData
    };
 
     public static string[,] ladySnailAllItemsDialogueForest = new string[,]
-{
+    {
         {"Pani Ślimak", "Ojejku, widzę, że zdobyłeś wszystkie składniki!"},
         {"Pani Ślimak", "Daj mi je, zaraz sporządzę miksturę."},
         {"Pani Ślimak", "..." },
@@ -96,6 +99,14 @@ public static class GameData
         {"Pani Ślimak", "Po wypiciu, zakręci ci się trochę w głowie i możesz zemdleć, ale po przebudzeniu się, będziesz z powrotem człowiekiem." },
         {"Rocco", "Dziękuję proszę Pani Ślimak! Pani zdrowie!" },
         {"Pani Ślimak", "Bywaj, słoneczko." }
-};
+    };
+
+    public static int boolToInt(bool value)
+    {
+        int result = Convert.ToInt32(value);
+        return result;
+    }
+
 }
 
+    

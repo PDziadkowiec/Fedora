@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Shrine : MonoBehaviour
 {
     public Text PressToHealSave;
     public Text NumberOfHealth;
+    public Text GameSaved;
     public AudioSource audioSource;
     public AudioClip HealthUpSE;
     private void OnTriggerEnter2D(Collider2D collision)
@@ -31,7 +33,33 @@ public class Shrine : MonoBehaviour
             }
             if (Input.GetKeyDown(KeyCode.F))
             {
-                //zapis stanu gry
+                PlayerPrefs.SetInt("healthPoints", GameData.healthPoints);
+                PlayerPrefs.SetInt("maxHealthPoints", GameData.maxHealthPoints);
+                PlayerPrefs.SetInt("coins", GameData.coins);
+                PlayerPrefs.SetInt("maxCoins", GameData.maxCoins);
+
+                PlayerPrefs.SetInt("jump", GameData.boolToInt(GameData.jump));
+                PlayerPrefs.SetInt("grapple", GameData.boolToInt(GameData.grapple));
+                PlayerPrefs.SetInt("swimming", GameData.boolToInt(GameData.swimming));
+
+                PlayerPrefs.SetInt("hasGrape", GameData.boolToInt(GameData.hasGrape));
+                PlayerPrefs.SetInt("hasBasil", GameData.boolToInt(GameData.hasBasil));
+                PlayerPrefs.SetInt("hasWater", GameData.boolToInt(GameData.hasWater));
+                PlayerPrefs.SetInt("hasCrystal", GameData.boolToInt(GameData.hasCrystal));
+
+                PlayerPrefs.SetInt("firstForestLadySnailDialogue", GameData.boolToInt(GameData.firstForestLadySnailDialogue));
+
+                Scene currentScene = SceneManager.GetActiveScene();
+
+                PlayerPrefs.SetInt("sceneIndex", currentScene.buildIndex);
+
+                PlayerPrefs.SetString("location", GameData.location);
+
+                //Nie ma potrzeby podawania koordynatów gracza,
+                //bo jedna zapisująca kapliczka na poziom?
+
+                GameSaved.gameObject.SetActive(true);
+
             }
         }
     }
@@ -41,7 +69,7 @@ public class Shrine : MonoBehaviour
         {
             //Znikną napisy co zrobić aby się wyleczyć/zapisać
             PressToHealSave.gameObject.SetActive(false);
-
+            GameSaved.gameObject.SetActive(false);
         }
     }
 }
