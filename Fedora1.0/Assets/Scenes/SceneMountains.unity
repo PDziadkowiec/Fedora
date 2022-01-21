@@ -5198,7 +5198,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Naci\u015Bnij E, aby si\u0119 uleczy\u0107\nNaci\u015Bnij F, aby zapisa\u0107"
+  m_Text: "Naci\u015Bnij E, aby si\u0119 uleczy\u0107\nNaci\u015Bnij Q, aby zapisa\u0107"
 --- !u!222 &1218087202
 CanvasRenderer:
   m_ObjectHideFlags: 0

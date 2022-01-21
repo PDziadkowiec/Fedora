@@ -6,6 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class Shrine : MonoBehaviour
 {
+
+    //SKRYPT PRZYPISANY DO KAPLICZKI
+
     public Text PressToHealSave;
     public Text NumberOfHealth;
     public Text GameSaved;
@@ -31,8 +34,9 @@ public class Shrine : MonoBehaviour
                 NumberOfHealth.text = (GameData.healthPoints).ToString() + " / " + (GameData.maxHealthPoints).ToString();
                 audioSource.GetComponent<AudioSource>().PlayOneShot(HealthUpSE);
             }
-            if (Input.GetKeyDown(KeyCode.F))
+            if (Input.GetKeyDown(KeyCode.Q))
             {
+                //Zapisanie danych do PlayerPrefs
                 PlayerPrefs.SetInt("healthPoints", GameData.healthPoints);
                 PlayerPrefs.SetInt("maxHealthPoints", GameData.maxHealthPoints);
                 PlayerPrefs.SetInt("coins", GameData.coins);
@@ -58,6 +62,7 @@ public class Shrine : MonoBehaviour
                 //Nie ma potrzeby podawania koordynatów gracza,
                 //bo jedna zapisująca kapliczka na poziom?
 
+                //Wyświetlenie komunikatu, że zapisano grę
                 GameSaved.gameObject.SetActive(true);
 
             }

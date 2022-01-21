@@ -16,10 +16,10 @@ public static class GameData
 
     public static string location = "Las";
 
-    public static bool hasGrape = true;
-    public static bool hasBasil = true;
-    public static bool hasWater = true;
-    public static bool hasCrystal = true;
+    public static bool hasGrape = false;
+    public static bool hasBasil = false;
+    public static bool hasWater = false;
+    public static bool hasCrystal = false;
 
     public static int sceneIndex = 1;
 
