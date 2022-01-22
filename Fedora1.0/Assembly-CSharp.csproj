@@ -81,7 +81,6 @@
     <Compile Include="Assets\Scripts\HUDMenuPauseScripts.cs" />
     <Compile Include="Assets\Scripts\HUDScripts.cs" />
     <Compile Include="Assets\Scripts\HedgehogAI.cs" />
-    <Compile Include="Assets\Scripts\Kettle.cs" />
     <Compile Include="Assets\Scripts\Menu.cs" />
     <Compile Include="Assets\Scripts\MenuPause.cs" />
     <Compile Include="Assets\Scripts\MoveBetScenes.cs" />

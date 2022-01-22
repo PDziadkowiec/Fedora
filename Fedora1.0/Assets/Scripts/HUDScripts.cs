@@ -21,6 +21,10 @@ public class HUDScripts : MonoBehaviour
     public Canvas EquipmentCanvas;
     public Button EquipmentButton;
     public Button ExitFromEquipmentButton;
+    public GameObject GrapeImage;
+    public GameObject BasilImage;
+    public GameObject WaterImage;
+    public GameObject CrystalImage;
 
     private void Start()
     {
@@ -56,11 +60,33 @@ public class HUDScripts : MonoBehaviour
     public void OpenEquipmentCanvas()
     {
         EquipmentCanvas.enabled = true;
+        
+        //Wyświetlenie rzeczy w ekwipunku
+        if (GameData.hasGrape == true)
+        {
+            GrapeImage.gameObject.SetActive(true);
+        }
+        if (GameData.hasBasil == true)
+        {
+            BasilImage.gameObject.SetActive(true);
+        }
+        if (GameData.hasWater == true)
+        {
+            WaterImage.gameObject.SetActive(true);
+        }
+        if (GameData.hasCrystal == true)
+        {
+           CrystalImage.gameObject.SetActive(true);
+        }
     }
 
     public void ExitEquipmentCanvas()
     {
         EquipmentCanvas.enabled = false;
+        GrapeImage.gameObject.SetActive(false);
+        BasilImage.gameObject.SetActive(false);
+        WaterImage.gameObject.SetActive(false);
+        CrystalImage.gameObject.SetActive(false);
     }
 
 }
