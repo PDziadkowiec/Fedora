@@ -11,7 +11,7 @@ public class GetGrapple : MonoBehaviour
 
     public AudioSource audioSource;
     public AudioClip powerUpSE;
-    //public Image GrappleSkillImage;
+    public Image GrappleSkillImage;
     public Canvas NewAbilityCanvas;
     public Text AbilityName;
     public Text AbilityDesc;
@@ -29,7 +29,7 @@ public class GetGrapple : MonoBehaviour
             AbilityDesc.text = "Użyj tej umiejętności, by dostać się do nowych miejsc!\nNaciśnij F, aby przyciągnąć się do odpowiednich obiektów.";
             NewAbilityCanvas.gameObject.SetActive(true);
 
-            //GrappleSkillImage.gameObject.SetActive(true);
+            GrappleSkillImage.gameObject.SetActive(true);
         }
     }
 

@@ -10,8 +10,11 @@ public class HUDScripts : MonoBehaviour
 
     public Text HealthAmmount;
     public Text CoinAmmount;
-    public Image JumpSkillImage;
     public Text locationNameText;
+
+    public Image JumpSkillImage;
+    public Image GrappleSkillImage;
+    public Image SwimmingSkillImage;
 
     public Canvas QuestCanvas;
     public Button QuestButton;
@@ -28,6 +31,18 @@ public class HUDScripts : MonoBehaviour
 
     private void Start()
     {
+        if(GameData.jump==true)
+        {
+            JumpSkillImage.gameObject.SetActive(true);
+        }
+        if (GameData.grapple == true)
+        {
+            GrappleSkillImage.gameObject.SetActive(true);
+        }
+        if (GameData.swimming == true)
+        {
+            SwimmingSkillImage.gameObject.SetActive(true);
+        }
 
         //Wyświetlenie nazwy lokacji
         locationNameText.text = GameData.location;

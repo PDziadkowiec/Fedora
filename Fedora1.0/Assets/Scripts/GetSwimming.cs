@@ -11,10 +11,11 @@ public class GetSwimming : MonoBehaviour
 
     public AudioSource audioSource;
     public AudioClip powerUpSE;
-
+    public Image SwimmingSkillImage;
     public Canvas NewAbilityCanvas;
     public Text AbilityName;
     public Text AbilityDesc;
+    
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -29,7 +30,7 @@ public class GetSwimming : MonoBehaviour
             AbilityDesc.text = "Rocco potrafi teraz poruszać się w wodzie.\nUżyj tej umiejętności, by dostać się do nowych miejsc!";
             NewAbilityCanvas.gameObject.SetActive(true);
 
-            //GrappleSkillImage.gameObject.SetActive(true);
+            SwimmingSkillImage.gameObject.SetActive(true);
         }
     }
 }
