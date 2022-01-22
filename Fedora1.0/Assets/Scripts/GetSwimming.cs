@@ -23,8 +23,8 @@ public class GetSwimming : MonoBehaviour
             audioSource.GetComponent<AudioSource>().PlayOneShot(powerUpSE);
             Destroy(gameObject);
             Time.timeScale = 0;
-            AbilityName.text = "Zdobyto umiejętność:\nPŁYWANIE";
-            AbilityDesc.text = "Rocco potrafi teraz pływać w wodzie.\nUżyj tej umiejętności, by dostać się do nowych miejsc!";
+            AbilityName.text = "Zdobyto umiejętność:\nODDYCHANIE POD WODĄ";
+            AbilityDesc.text = "Rocco potrafi teraz poruszać się w wodzie.\nUżyj tej umiejętności, by dostać się do nowych miejsc!";
             NewAbilityCanvas.gameObject.SetActive(true);
 
             //GrappleSkillImage.gameObject.SetActive(true);
