@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class EndGameMenuScripts : MonoBehaviour
 {
     //Skrypt przypisany do END GAME MENU SCRIPTS
+    //Skrypt obsługujący ostatnią scene tj. ekran przejścia gry
 
     public Text coins;
 

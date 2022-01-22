@@ -12,10 +12,12 @@ public class HUDMenuPauseScripts : MonoBehaviour
     public void BackToGame()
     {
         CanvasMenuPause.enabled = false;
+        Time.timeScale = 1;
     }
 
     public void BackToMainMenu()
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene(0);
     }
 

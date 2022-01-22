@@ -6,6 +6,7 @@ public class BottomofWater : MonoBehaviour
 {
 
     //Skrypt przypisany do obiektów BOTTOM OF WATER
+    //Służy do cofania gracza na ląd gdy zanurzy się w wodzie bez umiejętności Oddychanie Pod Wodą (swimming)
 
     public float position_x;
     public float position_y;

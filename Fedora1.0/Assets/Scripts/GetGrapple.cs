@@ -5,7 +5,9 @@ using UnityEngine.UI;
 
 public class GetGrapple : MonoBehaviour
 {
-    // Skrypt przypisany do GRAPPLE POWER  UP
+    // Skrypt przypisany do GRAPPLE POWER UP
+    // Skrypt wywołuje się po podniesieniu "zalążka magii"
+    // Umożliwia na uzywanie Lepkiego Języka
 
     public AudioSource audioSource;
     public AudioClip powerUpSE;

@@ -9,6 +9,10 @@ public class MenuPause : MonoBehaviour
 
     public Canvas CanvasMenuPause;
 
+    private void Start()
+    {
+
+    }
     void Update()
     {
         MenuPauseCanvas();
@@ -19,6 +23,7 @@ public class MenuPause : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             CanvasMenuPause.enabled = true;
+            Time.timeScale = 0;
         }
     }
 

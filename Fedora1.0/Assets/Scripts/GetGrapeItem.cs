@@ -7,6 +7,7 @@ public class GetGrapeItem : MonoBehaviour
 {
 
     //Skrypt przypisany do obiektu GRAPE ITEM
+    //Skrypt wywołany podczas podnoszenia Winogrona
 
     public AudioSource audioSource;
     public AudioClip getGrapeSE;

@@ -14,6 +14,7 @@ public class TransparentWall : MonoBehaviour
             GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 0.5f);
         }
     }
+    //Wyjście z triggera przywraca brak przeźroczystości
     private void OnTriggerExit2D(Collider2D collision)
     {
         GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 1f);

@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class GetWaterItem : MonoBehaviour
 {
     //Skrypt przypisany do obiektu WATER ITEM
+    // Skrypt wywołuje się po podniesniu Wody Ze Zaczarowanego Źródła
 
     public AudioSource audioSource;
     public AudioClip getWaterSE;

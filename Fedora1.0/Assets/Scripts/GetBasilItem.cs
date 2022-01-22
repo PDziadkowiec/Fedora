@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class GetBasilItem : MonoBehaviour
 {
     //Skrypt przypisany do obiektu BASIL ITEM
+    //Skrypt wywołuje się podczas podnoszenia Bazylii
 
     public AudioSource audioSource;
     public AudioClip getBasilSE;

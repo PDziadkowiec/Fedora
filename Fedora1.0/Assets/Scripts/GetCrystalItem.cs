@@ -5,7 +5,8 @@ using UnityEngine.UI;
 
 public class GetCrystalItem : MonoBehaviour
 {
-    //Skrypt przypisany do obiektu WATER ITEM
+    //Skrypt przypisany do obiektu CRYSTAL ITEM
+    //Skrypt wywołuje się gdy gracz podnosi Kryształ Przemiany
 
     public AudioSource audioSource;
     public AudioClip getCrystalSE;

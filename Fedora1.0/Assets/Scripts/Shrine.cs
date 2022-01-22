@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class Shrine : MonoBehaviour
 {
 
-    //SKRYPT PRZYPISANY DO KAPLICZKI
+    //SKRYPT PRZYPISANY DO SHRINE (KAPLICZKI)
 
     public Text PressToHealSave;
     public Text NumberOfHealth;
@@ -18,7 +18,7 @@ public class Shrine : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            //Pokażą się napisy co zrobić aby się wyleczyć/zapisać
+            //Pokazanie napisu co zrobić aby się wyleczyć/zapisać
             PressToHealSave.gameObject.SetActive(true);
         }
     }
@@ -34,6 +34,7 @@ public class Shrine : MonoBehaviour
                 NumberOfHealth.text = (GameData.healthPoints).ToString() + " / " + (GameData.maxHealthPoints).ToString();
                 audioSource.GetComponent<AudioSource>().PlayOneShot(HealthUpSE);
             }
+            //Jeśli naciśnięto klawisz odpowiedzialny za zapis
             if (Input.GetKeyDown(KeyCode.Q))
             {
                 //Zapisanie danych do PlayerPrefs
@@ -41,6 +42,7 @@ public class Shrine : MonoBehaviour
                 PlayerPrefs.SetInt("maxHealthPoints", GameData.maxHealthPoints);
                 PlayerPrefs.SetInt("coins", GameData.coins);
                 PlayerPrefs.SetInt("maxCoins", GameData.maxCoins);
+                PlayerPrefs.SetString("quest", GameData.listOfQuests);
 
                 PlayerPrefs.SetInt("jump", GameData.boolToInt(GameData.jump));
                 PlayerPrefs.SetInt("grapple", GameData.boolToInt(GameData.grapple));
@@ -72,7 +74,7 @@ public class Shrine : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            //Znikną napisy co zrobić aby się wyleczyć/zapisać
+            //Zniknięcie napisów co zrobić aby się wyleczyć/zapisać
             PressToHealSave.gameObject.SetActive(false);
             GameSaved.gameObject.SetActive(false);
         }

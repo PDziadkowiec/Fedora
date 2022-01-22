@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class TriggerKettle : MonoBehaviour
 {
 
-    //SKRYPT PRZYPISANY DO OBIEKTU KETTLE
+    //SKRYPT PRZYPISANY DO OBIEKTU KETTLE (KOCIOŁKA)
 
     public Text DrinkText;
 

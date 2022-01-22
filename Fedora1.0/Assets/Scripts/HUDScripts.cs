@@ -28,7 +28,6 @@ public class HUDScripts : MonoBehaviour
 
     private void Start()
     {
-        JumpSkillImage.gameObject.SetActive(false);
 
         //Wyświetlenie nazwy lokacji
         locationNameText.text = GameData.location;

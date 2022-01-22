@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class DamageWater : MonoBehaviour
 {
     // Skrypt przypisany do obiektów o tagu WATER
+    // Gdy gracz wejdzie do wody, a nie ma umiejętności Oddychanie Pod Wodą, traci HP
 
     Rigidbody2D rb;
     GameObject player;
@@ -41,14 +42,6 @@ public class DamageWater : MonoBehaviour
                     Time.timeScale = 0;
                     gameOverHUD.SetActive(true);
                 }
-            }
-            else
-            {
-
-                //Gracz może poruszać się góra-dół i nie spada w wodzie
-                //Wyłaczenie skoku?
-                //Dodanie trigera na powierzchni, który z powrotem umożliwia skok? i przywraca grawitację?
-
             }
         }
     }

@@ -7,6 +7,7 @@ public class GetCoin : MonoBehaviour
 {
 
     //Skrypt przypisany do obiektu COIN
+    //Skrypt wywoływany podczas podnoszenia monety
 
     public AudioSource audioSource;
     public AudioClip coinSE;

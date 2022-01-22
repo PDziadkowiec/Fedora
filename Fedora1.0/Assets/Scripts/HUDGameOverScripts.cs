@@ -11,6 +11,7 @@ public class HUDGameOverScripts : MonoBehaviour
 
     Canvas gameOverHud;
 
+    //Pobranie danych z ostatniego zapisu
     public void loadCheckpoint()
     {
         if (PlayerPrefs.GetInt("sceneIndex") > 0 && PlayerPrefs.GetInt("sceneIndex") <= 4)
@@ -28,6 +29,7 @@ public class HUDGameOverScripts : MonoBehaviour
             GameData.hasBasil = Convert.ToBoolean(PlayerPrefs.GetInt("hasBasil"));
             GameData.hasWater = Convert.ToBoolean(PlayerPrefs.GetInt("hasWater"));
             GameData.hasCrystal = Convert.ToBoolean(PlayerPrefs.GetInt("hasCrystal"));
+            GameData.listOfQuests = PlayerPrefs.GetString("quest");
             GameData.location = PlayerPrefs.GetString("location");
             GameData.firstForestLadySnailDialogue = Convert.ToBoolean(PlayerPrefs.GetInt("firstForestLadySnailDialogue"));
 
@@ -39,6 +41,7 @@ public class HUDGameOverScripts : MonoBehaviour
         }
     }
 
+    //Rozpoczęcie gry na nowo i przypisanie domyślnych zmiennych
     public void startGameAllOverAgain()
     {
         PlayerPrefs.SetInt("healthPoints", 3);
@@ -54,6 +57,8 @@ public class HUDGameOverScripts : MonoBehaviour
         PlayerPrefs.SetInt("hasBasil", 0);
         PlayerPrefs.SetInt("hasWater", 0);
         PlayerPrefs.SetInt("hasCrystal", 0);
+
+        PlayerPrefs.SetString("quest", "Dowiedz się, jak zmienić się z powrotem w człowieka.");
 
         PlayerPrefs.SetString("location", "Las");
         PlayerPrefs.SetInt("sceneIndex", 1);
@@ -73,6 +78,7 @@ public class HUDGameOverScripts : MonoBehaviour
         GameData.hasBasil = Convert.ToBoolean(PlayerPrefs.GetInt("hasBasil"));
         GameData.hasWater = Convert.ToBoolean(PlayerPrefs.GetInt("hasWater"));
         GameData.hasCrystal = Convert.ToBoolean(PlayerPrefs.GetInt("hasCrystal"));
+        GameData.listOfQuests = PlayerPrefs.GetString("quest");
         GameData.location = PlayerPrefs.GetString("location");
         GameData.firstForestLadySnailDialogue = Convert.ToBoolean(PlayerPrefs.GetInt("firstForestLadySnailDialogue"));
 

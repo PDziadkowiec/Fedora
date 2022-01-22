@@ -5,6 +5,8 @@ using UnityEngine;
 
 public static class GameData
 {
+    //Dane Gry
+
     public static int healthPoints = 3;
     public static int maxHealthPoints = 3;
     public static int coins = 0;

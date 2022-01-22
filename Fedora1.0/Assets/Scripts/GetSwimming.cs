@@ -6,6 +6,8 @@ using UnityEngine.UI;
 public class GetSwimming : MonoBehaviour
 {
     // Skrypt przypisany do SWIMMING POWER UP
+    // Skrypt wywołuje się po podniesieniu "zalążka magii"
+    // Pozwala Oddychać Pod Wodą
 
     public AudioSource audioSource;
     public AudioClip powerUpSE;

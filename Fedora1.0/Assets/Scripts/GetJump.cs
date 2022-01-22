@@ -6,6 +6,8 @@ using UnityEngine.UI;
 public class GetJump : MonoBehaviour
 {
     //Skrypt przypisany do obiektu JUMP POWER UP
+    //Skrypt wywołuje się po podniesiu "zalążka magii"
+    //Umożliwia Skok
 
     public AudioSource audioSource;
     public AudioClip powerUpSE;

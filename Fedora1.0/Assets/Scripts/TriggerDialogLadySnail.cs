@@ -40,7 +40,6 @@ public class TriggerDialogLadySnail : MonoBehaviour
         DialogueLadySnail(collision);
     }
 
-    //Zacina się dialog gdy na OnTriggerStay2D?
     private void DialogueLadySnail(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
@@ -91,7 +90,7 @@ public class TriggerDialogLadySnail : MonoBehaviour
                 //Wyłączenie napisu informacyjnego o możliwosci rozpoczęcia dialogu
                 PressToTalk.text = "";
 
-                //Klikanie pokazuje kolejna kwestię dialogową
+                //Klikanie E pokazuje kolejna kwestię dialogową
                 //Jeżeli jest możliwa kolejna kwestia dialogowa z tablicy danego dialogu
                 if (Input.anyKeyDown && (DialogueCounter < DialogueArrayLenght))
                 {
@@ -110,7 +109,7 @@ public class TriggerDialogLadySnail : MonoBehaviour
                     PressToTalk.gameObject.SetActive(true);
                     DialogueHUD.gameObject.SetActive(false);
                     PressToTalk.text = "Naciśnij E, \naby porozmawiać...";
-                    //Upewnienie się, gracz przeczyta cały pierwszy dialog
+                    //Upewnienie się, gracz przeczyta cały PIERWSZY dialog
                     //Zakończenie rozmowy poprzez odejście od NPCa NIE ZMIENI wartości zmiennej  
                     GameData.firstForestLadySnailDialogue = false;
                     //Zmiana treści questa w Zadaniach
