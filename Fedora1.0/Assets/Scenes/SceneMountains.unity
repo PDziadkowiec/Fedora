@@ -7830,7 +7830,7 @@ Transform:
   - {fileID: 67582876}
   - {fileID: 287059530}
   m_Father: {fileID: 0}
-  m_RootOrder: 22
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1272440022
 PrefabInstance:
@@ -8999,11 +8999,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1491640429}
   m_LocalRotation: {x: -0, y: -0, z: -0.13284005, w: 0.9911375}
-  m_LocalPosition: {x: 97.655, y: -3.091, z: 0}
+  m_LocalPosition: {x: -0.21500397, y: 0.53900003, z: 0}
   m_LocalScale: {x: 0.09659, y: 0.09659, z: 0.09659}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_Father: {fileID: 1518895728}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -15.267001}
 --- !u!1 &1518895727
 GameObject:
@@ -9019,6 +9019,7 @@ GameObject:
   - component: {fileID: 1518895731}
   - component: {fileID: 1518895730}
   - component: {fileID: 1518895729}
+  - component: {fileID: 1518895734}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -9039,6 +9040,7 @@ Transform:
   m_Children:
   - {fileID: 1542475739}
   - {fileID: 1548466941}
+  - {fileID: 1491640431}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9174,6 +9176,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1518895734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1518895727}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ca47deeed3a51349abd4bc60c897beb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 1548466939}
+  forestMusic: {fileID: 8300000, guid: 6ee008b05eea2be4c8933603a4a58583, type: 3}
+  provinceMusic: {fileID: 8300000, guid: d0ab1b0a19a4d1649a1a3b8bd050f894, type: 3}
+  cityMusic: {fileID: 8300000, guid: ea8b0ec096e6b4e468cd62558cbdffe9, type: 3}
+  mountainMusic: {fileID: 8300000, guid: e76bbb639b4e4b24caf7c28a142236d9, type: 3}
+  menuMusic: {fileID: 8300000, guid: d04a5e37dd47b154ebef4a934da1f447, type: 3}
 --- !u!1 &1534718670
 GameObject:
   m_ObjectHideFlags: 0
@@ -10417,7 +10437,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 23
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1688555226
 GameObject:

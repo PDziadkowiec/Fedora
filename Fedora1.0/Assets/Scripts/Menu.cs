@@ -16,6 +16,14 @@ public class Menu : MonoBehaviour
     public Slider musicSlider,seSlider;
     public AudioMixer audioMixer;
 
+    public AudioSource audioSource;
+    public AudioClip mainMenuMusic;
+
+    private void Start()
+    {
+        audioSource.GetComponent<AudioSource>().PlayOneShot(mainMenuMusic);
+    }
+
     public void showSettings()
     {
         canvasMainMenu.enabled = false;
