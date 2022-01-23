@@ -234,9 +234,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37e37f8afcda98148b1c60b8c38d620a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioSource: {fileID: 0}
+  audioSource: {fileID: 1548466939}
   coinSE: {fileID: 8300000, guid: c2f73939653e0004b937d21ba0caf468, type: 3}
-  CoinAmmount: {fileID: 0}
+  CoinAmmount: {fileID: 549268689}
 --- !u!58 &67582873
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -825,9 +825,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37e37f8afcda98148b1c60b8c38d620a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioSource: {fileID: 0}
+  audioSource: {fileID: 1548466939}
   coinSE: {fileID: 8300000, guid: c2f73939653e0004b937d21ba0caf468, type: 3}
-  CoinAmmount: {fileID: 0}
+  CoinAmmount: {fileID: 549268689}
 --- !u!58 &156874513
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1345,9 +1345,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37e37f8afcda98148b1c60b8c38d620a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioSource: {fileID: 0}
+  audioSource: {fileID: 1548466939}
   coinSE: {fileID: 8300000, guid: c2f73939653e0004b937d21ba0caf468, type: 3}
-  CoinAmmount: {fileID: 0}
+  CoinAmmount: {fileID: 549268689}
 --- !u!58 &287059532
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -5703,9 +5703,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37e37f8afcda98148b1c60b8c38d620a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioSource: {fileID: 0}
+  audioSource: {fileID: 1548466939}
   coinSE: {fileID: 8300000, guid: c2f73939653e0004b937d21ba0caf468, type: 3}
-  CoinAmmount: {fileID: 0}
+  CoinAmmount: {fileID: 549268689}
 --- !u!58 &995059973
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -10336,9 +10336,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc3eeec42d5c8864bbcebb9086564469, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioSource: {fileID: 0}
+  audioSource: {fileID: 1548466939}
   healthUpSE: {fileID: 8300000, guid: b4892ea8ca0f4a846804b1c150dbcee9, type: 3}
-  HealthAmmount: {fileID: 0}
+  HealthAmmount: {fileID: 395102667}
 --- !u!58 &1671484626
 CircleCollider2D:
   m_ObjectHideFlags: 0
