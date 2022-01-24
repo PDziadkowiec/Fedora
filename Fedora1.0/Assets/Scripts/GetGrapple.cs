@@ -8,6 +8,7 @@ public class GetGrapple : MonoBehaviour
     // Skrypt przypisany do GRAPPLE POWER UP
     // Skrypt wywołuje się po podniesieniu "zalążka magii"
     // Umożliwia na uzywanie Lepkiego Języka
+    private static readonly string SoundEffectsPref = "SoundEffectsPref";
 
     public AudioSource audioSource;
     public AudioClip powerUpSE;
@@ -22,6 +23,7 @@ public class GetGrapple : MonoBehaviour
         {
             //Gracz posiada umiejętność grapple
             GameData.grapple = true;
+            audioSource.volume = PlayerPrefs.GetFloat(SoundEffectsPref);
             audioSource.GetComponent<AudioSource>().PlayOneShot(powerUpSE);
             Destroy(gameObject);
             Time.timeScale = 0;

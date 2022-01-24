@@ -13,6 +13,7 @@ public class Shrine : MonoBehaviour
     public Text NumberOfHealth;
     public Text GameSaved;
     public AudioSource audioSource;
+    private static readonly string SoundEffectsPref = "SoundEffectsPref";
     public AudioClip HealthUpSE;
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -32,6 +33,7 @@ public class Shrine : MonoBehaviour
             {
                 GameData.healthPoints = GameData.maxHealthPoints;
                 NumberOfHealth.text = (GameData.healthPoints).ToString() + " / " + (GameData.maxHealthPoints).ToString();
+                audioSource.volume = PlayerPrefs.GetFloat(SoundEffectsPref);
                 audioSource.GetComponent<AudioSource>().PlayOneShot(HealthUpSE);
             }
             //Jeśli naciśnięto klawisz odpowiedzialny za zapis

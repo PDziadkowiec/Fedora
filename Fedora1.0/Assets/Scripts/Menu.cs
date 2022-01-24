@@ -13,15 +13,16 @@ public class Menu : MonoBehaviour
     //Skrypt do obsługi Menu Głównego, w tym ustawień
 
     public Canvas canvasMainMenu, canvasSettings;
-    public Slider musicSlider,seSlider;
-    public AudioMixer audioMixer;
-
+    public Slider musicSlider;
+    private static readonly string SoundEffectsPref = "SoundEffectsPref";
     public AudioSource audioSource;
     public AudioClip mainMenuMusic;
 
     private void Start()
-    {
+    { 
+        audioSource.volume = PlayerPrefs.GetFloat(SoundEffectsPref); 
         audioSource.GetComponent<AudioSource>().PlayOneShot(mainMenuMusic);
+  
     }
 
     public void showSettings()
@@ -117,9 +118,4 @@ public class Menu : MonoBehaviour
         Screen.fullScreen = isFullScreen;
     }
     
-    public void VolumeChange(float v)
-    {
-        audioMixer.SetFloat("volume", v);
-    }
-
 }

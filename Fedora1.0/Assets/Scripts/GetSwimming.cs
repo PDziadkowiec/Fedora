@@ -8,6 +8,7 @@ public class GetSwimming : MonoBehaviour
     // Skrypt przypisany do SWIMMING POWER UP
     // Skrypt wywołuje się po podniesieniu "zalążka magii"
     // Pozwala Oddychać Pod Wodą
+    private static readonly string SoundEffectsPref = "SoundEffectsPref";
 
     public AudioSource audioSource;
     public AudioClip powerUpSE;
@@ -23,6 +24,7 @@ public class GetSwimming : MonoBehaviour
         {
             //Gracz posiada umiejętność grapple
             GameData.swimming = true;
+            audioSource.volume = PlayerPrefs.GetFloat(SoundEffectsPref);
             audioSource.GetComponent<AudioSource>().PlayOneShot(powerUpSE);
             Destroy(gameObject);
             Time.timeScale = 0;

@@ -8,6 +8,7 @@ public class GetCoin : MonoBehaviour
 
     //Skrypt przypisany do obiektu COIN
     //Skrypt wywoływany podczas podnoszenia monety
+    private static readonly string SoundEffectsPref = "SoundEffectsPref";
 
     public AudioSource audioSource;
     public AudioClip coinSE;
@@ -18,6 +19,7 @@ public class GetCoin : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             //Dźwięk podniesienia monety
+            audioSource.volume = PlayerPrefs.GetFloat(SoundEffectsPref);
             audioSource.GetComponent<AudioSource>().PlayOneShot(coinSE);
             GameData.coins++;
             Destroy(gameObject);

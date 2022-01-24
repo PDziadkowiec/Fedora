@@ -7,7 +7,6 @@ public class Movement : MonoBehaviour
 {
 
     //Skrypt przypisany do obiektu PLAYER
-
     Rigidbody2D rb;
     public float speed;
     public float jumpForce;
@@ -28,6 +27,9 @@ public class Movement : MonoBehaviour
 
     public GameObject gameOverHUD;
     public GameObject HUD;
+
+    private static readonly string SoundEffectsPref = "SoundEffectsPref";
+
 
     void Start()
     {
@@ -65,6 +67,7 @@ public class Movement : MonoBehaviour
             {
                 rb.velocity = new Vector2(rb.velocity.x, jumpForce);
                 //Dźwięk skoku
+                audioSource.volume = PlayerPrefs.GetFloat(SoundEffectsPref);
                 audioSource.GetComponent<AudioSource>().PlayOneShot(jumpSE);
                 jumpCooldown = true;
             }
@@ -99,6 +102,8 @@ public class Movement : MonoBehaviour
                                                                                                   // stronę odpycha gracza
                     GameData.healthPoints--;
                     //Dźwięk utracenia życia
+                    audioSource.volume = PlayerPrefs.GetFloat(SoundEffectsPref);
+
                     audioSource.GetComponent<AudioSource>().PlayOneShot(healthDownSE);
                     //Wyświetlanie / zaktualizowanie ilości życia
                     HealthAmmount.text = (GameData.healthPoints).ToString() + " / " + (GameData.maxHealthPoints).ToString();

@@ -8,6 +8,7 @@ public class GetJump : MonoBehaviour
     //Skrypt przypisany do obiektu JUMP POWER UP
     //Skrypt wywołuje się po podniesiu "zalążka magii"
     //Umożliwia Skok
+    private static readonly string SoundEffectsPref = "SoundEffectsPref";
 
     public AudioSource audioSource;
     public AudioClip powerUpSE;
@@ -22,6 +23,7 @@ public class GetJump : MonoBehaviour
         {
             //Gracz posiada umiejętność skok
             GameData.jump = true;
+            audioSource.volume = PlayerPrefs.GetFloat(SoundEffectsPref);
             audioSource.GetComponent<AudioSource>().PlayOneShot(powerUpSE);
             Destroy(gameObject);
             Time.timeScale = 0;
