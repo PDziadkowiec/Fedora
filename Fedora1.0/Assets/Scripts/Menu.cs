@@ -43,7 +43,7 @@ public class Menu : MonoBehaviour
         PlayerPrefs.SetInt("healthPoints", 3);
         PlayerPrefs.SetInt("maxHealthPoints", 3);
         PlayerPrefs.SetInt("coins", 0);
-        PlayerPrefs.SetInt("maxCoins", 100);
+        PlayerPrefs.SetInt("maxCoins", 34);
 
         PlayerPrefs.SetInt("jump", 0);
         PlayerPrefs.SetInt("grapple", 0);
