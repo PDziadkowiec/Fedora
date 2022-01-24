@@ -4293,12 +4293,12 @@ PrefabInstance:
     - target: {fileID: 3695602001074728340, guid: c9eca33e4d2426d4899add237dc69fba,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 165.64
+      value: 165.55
       objectReference: {fileID: 0}
     - target: {fileID: 3695602001074728340, guid: c9eca33e4d2426d4899add237dc69fba,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -19.36
+      value: -18.89
       objectReference: {fileID: 0}
     - target: {fileID: 3695602001074728340, guid: c9eca33e4d2426d4899add237dc69fba,
         type: 3}
@@ -4345,10 +4345,40 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3695602001074728340, guid: c9eca33e4d2426d4899add237dc69fba,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.38900453
+      objectReference: {fileID: 0}
+    - target: {fileID: 3695602001074728340, guid: c9eca33e4d2426d4899add237dc69fba,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.38900453
+      objectReference: {fileID: 0}
+    - target: {fileID: 3695602001074728340, guid: c9eca33e4d2426d4899add237dc69fba,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.38900453
+      objectReference: {fileID: 0}
+    - target: {fileID: 3695602001074728342, guid: c9eca33e4d2426d4899add237dc69fba,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: -1.2304113
+      objectReference: {fileID: 0}
+    - target: {fileID: 3695602001074728342, guid: c9eca33e4d2426d4899add237dc69fba,
+        type: 3}
+      propertyPath: m_Radius
+      value: 1.5488818
+      objectReference: {fileID: 0}
+    - target: {fileID: 3695602001074728342, guid: c9eca33e4d2426d4899add237dc69fba,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: -0.18152973
+      objectReference: {fileID: 0}
     - target: {fileID: 3695602001074728343, guid: c9eca33e4d2426d4899add237dc69fba,
         type: 3}
       propertyPath: m_Color.r
-      value: 0.5518868
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3695602001074728343, guid: c9eca33e4d2426d4899add237dc69fba,
         type: 3}
@@ -4358,8 +4388,14 @@ PrefabInstance:
     - target: {fileID: 3695602001074728343, guid: c9eca33e4d2426d4899add237dc69fba,
         type: 3}
       propertyPath: m_Color.b
-      value: 0.9952194
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3695602001074728343, guid: c9eca33e4d2426d4899add237dc69fba,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e7e48123e2f33ed489bab7c54de01a31,
+        type: 3}
     - target: {fileID: 3695602001074728345, guid: c9eca33e4d2426d4899add237dc69fba,
         type: 3}
       propertyPath: m_Name
@@ -15963,7 +15999,7 @@ MonoBehaviour:
   PressToHealSave: {fileID: 652659821}
   NumberOfHealth: {fileID: 1608903523}
   GameSaved: {fileID: 695064650}
-  audioSource: {fileID: 0}
+  audioSource: {fileID: 1094210316}
   HealthUpSE: {fileID: 8300000, guid: b4892ea8ca0f4a846804b1c150dbcee9, type: 3}
 --- !u!4 &1164042180 stripped
 Transform:
