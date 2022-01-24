@@ -1090,9 +1090,9 @@ RectTransform:
   m_Father: {fileID: 636742579}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 1}
-  m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -367.39993, y: -149.5}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 155.60007, y: -149.5}
   m_SizeDelta: {x: 151.31995, y: 55.510986}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &153466646
@@ -17047,9 +17047,9 @@ RectTransform:
   m_Father: {fileID: 636742579}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 1}
-  m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -367.39993, y: -101.94}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 155.60007, y: -101.94}
   m_SizeDelta: {x: 151.31995, y: 58.085266}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1072346930
@@ -20891,9 +20891,9 @@ RectTransform:
   m_Father: {fileID: 636742579}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 1}
-  m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -468, y: -145}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 55, y: -145}
   m_SizeDelta: {x: 28.039612, y: 28.039612}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1316633107
@@ -26129,9 +26129,9 @@ RectTransform:
   m_Father: {fileID: 636742579}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 1}
-  m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -467.99994, y: -97.70001}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 55.00006, y: -97.70001}
   m_SizeDelta: {x: 33.276123, y: 28.039612}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1696119196
@@ -27402,7 +27402,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1784922446
 RectTransform:
   m_ObjectHideFlags: 0
@@ -27420,9 +27420,9 @@ RectTransform:
   m_Father: {fileID: 636742579}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 1}
-  m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -42, y: -104.82001}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -565, y: -104.82001}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1787858134
@@ -29691,7 +29691,7 @@ GameObject:
   - component: {fileID: 1902017233}
   - component: {fileID: 1902017232}
   m_Layer: 0
-  m_Name: PANI SLIMAK XD
+  m_Name: LadySnail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

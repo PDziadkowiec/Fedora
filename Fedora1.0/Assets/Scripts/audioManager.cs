@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class audioManager : MonoBehaviour
 {
+    //Skrypt przypisany do sound effect slider'a
+
     private static readonly string FirstPlay = "FirstPlay";
     private static readonly string SoundEffectsPref = "SoundEffectsPref";
     private int firstPlayInt;
