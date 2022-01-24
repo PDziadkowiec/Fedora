@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 679, y: 492}
   m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
-  controlID: 142
+  controlID: 57
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -68,8 +68,8 @@ MonoBehaviour:
     y: 0
     width: 349
     height: 947
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
@@ -219,7 +219,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 102
+  controlID: 58
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -244,7 +244,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 77
+  controlID: 59
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -457,20 +457,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts
+    - Assets/Scenes
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts
+  - Assets/Scenes
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\wikto\Documents\GitHub\Fedora\Fedora1.0
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: e6440000
-    m_LastClickedID: 17638
-    m_ExpandedIDs: 00000000d644000000ca9a3b
+    m_SelectedIDs: 7a3b0000
+    m_LastClickedID: 15226
+    m_ExpandedIDs: 00000000703b000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -498,7 +498,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000d6440000
+    m_ExpandedIDs: 00000000703b0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -621,9 +621,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 3c330000
+      m_SelectedIDs: cc3c0000
       m_LastClickedID: 0
-      m_ExpandedIDs: 12eaffff1cebffff6aecffffaceeffff90f0ffffdef0fffff2f0ffff8ef1ffff96f1ffffb2f1fffff0f1ffff6ef2ffff84f2ffff76f4ffff56f6ffff28f8ffff5efbffff543c00007c5a00003c7100002c7c0000001d0100
+      m_ExpandedIDs: baacffff98b8ffff18c9ffff48d1ffffcae2ffff0eefffff4cefffffe8f9ffff5efaffff5efbffff8c390000b2470000844a00004c67000082cc0000eacc0000bed10000c6380100aa3b0100a43f0100866301006064010084c60100
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -683,9 +683,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 612.5268, y: 27.891882, z: 14640.0625}
+    m_Target: {x: 89.57556, y: 1.8746122, z: -198.79297}
     speed: 2
-    m_Value: {x: 612.5268, y: 27.891882, z: 14640.0625}
+    m_Value: {x: 89.57556, y: 1.8746122, z: -198.79297}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -735,9 +735,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 377.74194
+    m_Target: 24.251123
     speed: 2
-    m_Value: 377.74194
+    m_Value: 24.251123
   m_Ortho:
     m_Target: 1
     speed: 2
