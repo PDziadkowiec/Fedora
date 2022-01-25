@@ -18,6 +18,7 @@ public class Movement : MonoBehaviour
     Transform grappleTarget;
     float hitTimer;
     public float postHitInvincibility;
+    int side;
 
     public Text HealthAmmount;
 
@@ -97,9 +98,18 @@ public class Movement : MonoBehaviour
                 {
                     knockbacked = true;
                     jumpCooldown = true;
-                    HedgehogAI enemy = collision.gameObject.GetComponent<HedgehogAI>();
-                    rb.velocity = new Vector2(knockbackStrength * enemy.side, knockbackStrength); // skrypt sprawdza w którą stronę przeciwnik się aktualnie przemieszcza i w tą samą
-                                                                                                  // stronę odpycha gracza
+                    if (TryGetComponent<HedgehogAI>(out HedgehogAI h) == true)
+                    {
+                        h = collision.gameObject.GetComponent<HedgehogAI>();
+                        side = h.side;
+                    }
+                    if(TryGetComponent<FrogAI>(out FrogAI f) == true)
+                    {
+                        f = collision.gameObject.GetComponent<FrogAI>();
+                        side = f.side;
+                    }                       
+                        rb.velocity = new Vector2(knockbackStrength * side, knockbackStrength); // skrypt sprawdza w którą stronę przeciwnik się aktualnie przemieszcza i w tą samą
+                                                                                                              // stronę odpycha gracz
                     GameData.healthPoints--;
                     //Dźwięk utracenia życia
                     audioSource.volume = PlayerPrefs.GetFloat(SoundEffectsPref);

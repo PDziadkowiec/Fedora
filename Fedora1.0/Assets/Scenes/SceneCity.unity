@@ -15765,11 +15765,11 @@ MonoBehaviour:
   jumpForce: 8.25
   knockbackStrength: 8
   postHitInvincibility: 1.5
-  HealthAmmount: {fileID: 0}
+  HealthAmmount: {fileID: 1409445932}
   audioSource: {fileID: 1977491095}
   jumpSE: {fileID: 8300000, guid: 31eb6121d4702e745abda31b950bc8b1, type: 3}
   healthDownSE: {fileID: 8300000, guid: 65d9b2bed272f2442aa10bec180e11f3, type: 3}
-  gameOverHUD: {fileID: 0}
+  gameOverHUD: {fileID: 953590601}
   HUD: {fileID: 0}
 --- !u!212 &1475567710
 SpriteRenderer:
